@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IzzyScape Professionals | Turning Yards Into Masterpieces</title>  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #1b5e20, #4caf50);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header img {
+      max-width: 280px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    nav {
+      background: #124018;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #1b5e20;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .order-box {
+      background: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+
+    .price-box {
+      background: #e8f5e9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .reviews {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .review {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #124018;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #a5d6a7;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style></head>
+<body><!-- HEADER --><header>
+  <img src="logo.jpg" alt="IzzyScape Professionals Logo">
+  <h1>IzzyScape Professionals</h1>
+  <p>Turning Yards Into Masterpieces</p>
+</header><!-- NAV --><nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#order">Customize & Pay</a>
+  <a href="#maintenance">Maintenance</a>
+  <a href="#reviews">Reviews</a>
+</nav><!-- HOME --><section id="home">
+  <h2>Why Professional Landscaping Matters</h2>  <div class="hero">
+    <div>
+      <p>
+        At IzzyScape Professionals, we help homeowners protect their property value,
+        improve curb appeal, and enjoy beautiful outdoor spaces year-round.
+      </p><ul>
+    <li>Boosts home value</li>
+    <li>Prevents weeds and pests</li>
+    <li>Improves drainage</li>
+    <li>Creates relaxing spaces</li>
+    <li>Reduces maintenance problems</li>
+  </ul>
+</div>
+
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Yard">
+
+  </div>
+</section><!-- SERVICES --><section id="services">
+  <h2>Our Services</h2>  <div class="services"><div class="card">
+  <img src="https://images.unsplash.com/photo-1597008641621-7b1ad3cb37f2">
+  <h3>Lawn Care & Sod</h3>
+  <p>Healthy grass and full lawn restoration.</p>
+  <ul>
+    <li>Mowing & edging</li>
+    <li>Fertilizing</li>
+    <li>Weed control</li>
+    <li>Sod install</li>
+  </ul>
+  <strong>$80+</strong>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
+  <h3>Patios & Walkways</h3>
+  <p>Custom outdoor living areas.</p>
+  <ul>
+    <li>Pavers</li>
+    <li>Concrete</li>
+    <li>Stone paths</li>
+    <li>Drainage</li>
+  </ul>
+  <strong>$450+</strong>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62">
+  <h3>Garden & Mulch</h3>
+  <p>Beautiful planting designs.</p>
+  <ul>
+    <li>Flowers</li>
+    <li>Plants</li>
+    <li>Mulch</li>
+    <li>Soil care</li>
+  </ul>
+  <strong>$120+</strong>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+  <h3>Tree & Shrub Care</h3>
+  <p>Safe trimming and shaping.</p>
+  <ul>
+    <li>Pruning</li>
+    <li>Shaping</li>
+    <li>Storm prep</li>
+    <li>Disease control</li>
+  </ul>
+  <strong>$90+</strong>
+</div>
+
+  </div>
+</section><!-- ORDER --><section id="order">
+  <h2>Customize Your Service</h2>  <div class="order-box"><label>Name</label>
+<input id="name">
+
+<label>Email</label>
+<input id="email" type="email">
+
+<label>Select Services</label>
+<select id="service" multiple>
+  <option value="80">Lawn Care ($80)</option>
+  <option value="450">Patios ($450)</option>
+  <option value="120">Garden ($120)</option>
+  <option value="90">Tree Trimming ($90)</option>
+</select>
+
+<label>Maintenance Plan</label>
+<select id="plan">
+  <option value="0">One-Time</option>
+  <option value="200">Weekly ($200/mo)</option>
+  <option value="120">Monthly ($120/mo)</option>
+</select>
+
+<label>Yard Size</label>
+<select id="size">
+  <option value="1">Small</option>
+  <option value="1.3">Medium</option>
+  <option value="1.6">Large</option>
+</select>
+
+<label>Notes</label>
+<textarea rows="3"></textarea>
+
+<div class="price-box">Total: $<span id="total">0</span></div>
+
+<button onclick="calculate()">Calculate</button>
+<button onclick="pay()">Pay Now</button>
+
+  </div>
+</section><!-- MAINTENANCE --><section id="maintenance">
+  <h2>Maintenance Plans</h2>  <div class="services"><div class="card">
+  <h3>Weekly Care</h3>
+  <p>$200 / Month</p>
+  <ul>
+    <li>Weekly mowing</li>
+    <li>Trimming</li>
+    <li>Fertilizing</li>
+    <li>Weed control</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Monthly Care</h3>
+  <p>$120 / Month</p>
+  <ul>
+    <li>Monthly mowing</li>
+    <li>Basic trim</li>
+    <li>Inspection</li>
+    <li>Cleanup</li>
+  </ul>
+</div>
+
+  </div>
+</section><!-- REVIEWS --><section id="reviews">
+  <h2>Customer Reviews</h2>  <div class="reviews" id="reviewList"><div class="review">
+  <strong>Maria G.</strong>
+  <p>★★★★★ Excellent work!</p>
+</div>
+
+  </div>  <div class="order-box"><h3>Leave a Review</h3>
+
+<label>Name</label>
+<input id="rname">
+
+<label>Review</label>
+<textarea id="rtext" rows="3"></textarea>
+
+<button onclick="addReview()">Submit</button>
+
+  </div>
+</section><!-- FOOTER --><footer>
+  <p><strong>For further assistance, please call or text now to speak with a live representative</strong></p>  <p style="font-size:24px; font-weight:bold;">📞 (510) 571-7801</p>  <p>Or email us at <a href="mailto:Izzyscapelandscapingpros@gmail.com">Izzyscapelandscapingpros@gmail.com</a></p>  <p>© 2026 IzzyScape Professionals</p>
+</footer><!-- SCRIPTS --><script>
+  function calculate() {
+
+    let service = document.getElementById("service");
+    let plan = Number(document.getElementById("plan").value);
+    let size = Number(document.getElementById("size").value);
+
+    let total = 0;
+
+    for (let opt of service.selectedOptions) {
+      total += Number(opt.value);
+    }
+
+    total += plan;
+    total *= size;
+
+    document.getElementById("total").innerText = total.toFixed(2);
+  }
+
+  function pay() {
+    let total = document.getElementById("total").innerText;
+
+    if (total == "0") {
+      alert("Please calculate first");
+      return;
+    }
+
+    alert("Demo payment: $" + total + " charged. Thank you!");
+  }
+
+  function addReview() {
+
+    let name = document.getElementById("rname").value;
+    let text = document.getElementById("rtext").value;
+
+    if (!name || !text) {
+      alert("Fill out all fields");
+      return;
+    }
+
+    let div = document.createElement("div");
+    div.className = "review";
+    div.innerHTML = "<strong>" + name + "</strong><p>★★★★★ " + text + "</p>";
+
+    document.getElementById("reviewList").appendChild(div);
+
+    document.getElementById("rname").value = "";
+    document.getElementById("rtext").value = "";
+  }
+</script></body>
+</html>

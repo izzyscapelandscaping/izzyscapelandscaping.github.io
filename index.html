@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IzzyScape Professionals</title>
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>IzzyScape Professionals</title><style>
 
 body {
     margin: 0;
@@ -15,7 +10,7 @@ body {
     color: white;
 }
 
-/* CART SYSTEM */
+/* CART */
 
 .cart-box {
     position: fixed;
@@ -29,16 +24,16 @@ body {
     z-index: 1000;
 }
 
-/* HEADER */
+/* HERO */
 
 header {
-    background: url("https://images.unsplash.com/photo-1599685315644-23cc2e2dfd3d?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-    padding: 130px 20px;
+    background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+    padding: 150px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 48px;
+    font-size: 50px;
     margin-bottom: 10px;
     color: black;
 }
@@ -64,14 +59,30 @@ header p {
 /* SECTIONS */
 
 section {
-    padding: 40px 20px;
-    max-width: 1100px;
+    padding: 70px 20px;
+    max-width: 1200px;
     margin: auto;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+}
+
+/* BACKGROUND SECTIONS */
+
+.landscape-section {
+    background: url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
+}
+
+.pressure-section {
+    background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.7);
+    padding: 50px 20px;
+    border-radius: 12px;
 }
 
 /* SERVICE BOX */
@@ -95,7 +106,7 @@ h2 {
     cursor: pointer;
 }
 
-/* WHY + REVIEWS */
+/* INFO BOX */
 
 .why {
     background: #145a3a;
@@ -104,7 +115,7 @@ h2 {
     line-height: 1.7;
 }
 
-/* CONTACT FORM */
+/* FORM */
 
 input, textarea {
     width: 100%;
@@ -119,250 +130,89 @@ input, textarea {
 footer {
     background: #0a291f;
     text-align: center;
-    padding: 30px;
+    padding: 35px;
 }
 
 footer strong {
-    font-size: 20px;
+    font-size: 22px;
 }
 
-</style>
-</head>
-
-<body>
-
-
-<!-- CART DISPLAY -->
-
-<div class="cart-box" id="cartBox">
-Cart: 0
-</div>
-
-
-<script>
-
+</style></head><body><!-- CART --><div class="cart-box" id="cartBox">Cart: 0</div><script>
 let cart = [];
 
 function addToCart(item) {
     cart.push(item);
     document.getElementById("cartBox").innerText = "Cart: " + cart.length;
-    alert(item + " added!");
+    alert(item + " added to cart!");
 }
+</script><!-- HERO --><header><h1>IzzyScape Professionals</h1>
+<p>Professional Landscaping & Yard Care</p><a class="btn" href="#contact">Get Free Quote</a>
 
-</script>
-
-
-<!-- HEADER -->
-
-<header>
-
-<h1>IzzyScape Professionals</h1>
-
-<p>Turning Yards Into Masterpieces</p>
-
-<a class="btn" href="#contact">Get a Free Quote</a>
-
-</header>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2>Our Services</h2>
-
-<div class="service">
+</header><!-- LANDSCAPING SERVICES --><section class="landscape-section" id="services">
+<div class="overlay"><h2>Landscaping Services</h2><div class="service">
 <span>Lawn Mowing & Edging – $60+</span>
 <button onclick="addToCart('Lawn Mowing $60+')">Add</button>
-</div>
-
-<div class="service">
+</div><div class="service">
 <span>Weed Removal – $75+</span>
 <button onclick="addToCart('Weed Removal $75+')">Add</button>
-</div>
-
-<div class="service">
+</div><div class="service">
 <span>Bush & Hedge Trimming – $80+</span>
-<button onclick="addToCart('Bush Trimming $80+')">Add</button>
-</div>
-
-<div class="service">
+<button onclick="addToCart('Hedge Trimming $80+')">Add</button>
+</div><div class="service">
 <span>Tree Trimming – $150+</span>
 <button onclick="addToCart('Tree Trimming $150+')">Add</button>
-</div>
-
-<div class="service">
+</div><div class="service">
 <span>Mulching – $120+</span>
 <button onclick="addToCart('Mulching $120+')">Add</button>
-</div>
-
-<div class="service">
+</div><div class="service">
 <span>Sod Installation – $3 / sq ft</span>
-<button onclick="addToCart('Sod $3/sqft')">Add</button>
-</div>
-
-<div class="service">
-<span>Irrigation Repair – $90+</span>
-<button onclick="addToCart('Irrigation $90+')">Add</button>
-</div>
-
-<div class="service">
+<button onclick="addToCart('Sod Install')">Add</button>
+</div><div class="service">
 <span>Yard Cleanup – $150+</span>
 <button onclick="addToCart('Cleanup $150+')">Add</button>
-</div>
-
-<div class="service">
-<span>Flower Bed Design – $100+</span>
-<button onclick="addToCart('Flower Bed $100+')">Add</button>
-</div>
-
-<div class="service">
+</div><div class="service">
 <span>Rock & Gravel Install – $200+</span>
 <button onclick="addToCart('Rock Install $200+')">Add</button>
-</div>
-
-</section>
-
-
-<!-- PRESSURE WASHING -->
-
-<section>
-
-<h2>Pressure Washing</h2>
-
-<div class="service">
+</div></div>
+</section><!-- PRESSURE WASHING --><section class="pressure-section">
+<div class="overlay"><h2>Pressure Washing</h2><div class="service">
 <span>Driveway – $40</span>
 <button onclick="addToCart('Driveway $40')">Add</button>
-</div>
-
-<div class="service">
+</div><div class="service">
 <span>Patio – $30</span>
 <button onclick="addToCart('Patio $30')">Add</button>
-</div>
-
-<div class="service">
+</div><div class="service">
 <span>Whole House – $200</span>
-<button onclick="addToCart('Whole House $200')">Add</button>
-</div>
-
-<div class="service">
+<button onclick="addToCart('House Wash $200')">Add</button>
+</div><div class="service">
 <span>Garage / Shed – $80</span>
-<button onclick="addToCart('Garage $80')">Add</button>
-</div>
-
-</section>
-
-
-<!-- SPECIAL -->
-
-<section>
-
-<h2>Special Offer</h2>
-
-<div class="service">
-<span>Front + Back Yard Special – $499</span>
+<button onclick="addToCart('Garage Wash $80')">Add</button>
+</div></div>
+</section><!-- SPECIAL --><section><h2>Special Offer</h2><div class="service">
+<span>Front & Back Yard Special – $499</span>
 <button onclick="addToCart('Special $499')">Add</button>
-</div>
-
-</section>
-
-
-<!-- MAINTENANCE -->
-
-<section>
-
-<h2>Maintenance Plan</h2>
-
-<div class="service">
-<span>Monthly Visit Plan – $250 / Month</span>
+</div></section><!-- MAINTENANCE --><section><h2>Maintenance Plan</h2><div class="service">
+<span>Monthly Visit – $250 / Month</span>
 <button onclick="addToCart('Monthly $250')">Add</button>
-</div>
-
-</section>
-
-
-<!-- WHY CARE -->
-
-<section>
-
-<h2>Why Yard Care Is Important</h2>
-
-<div class="why">
-
-<p>✔ Boosts property value</p>
-<p>✔ Keeps pests away</p>
+</div></section><!-- WHY --><section><h2>Why Yard Care Matters</h2><div class="why">
+<p>✔ Increases home value</p>
+<p>✔ Prevents overgrowth</p>
 <p>✔ Improves curb appeal</p>
-<p>✔ Prevents lawn damage</p>
-<p>✔ Creates relaxing space</p>
-<p>✔ Saves money long-term</p>
-
-</div>
-
-</section>
-
-
-<!-- REVIEWS -->
-
-<section>
-
-<h2>Customer Reviews</h2>
-
-<div class="why">
-
-<p>⭐⭐⭐⭐⭐ “Excellent work every time!” – Maria G.</p>
-
-<p>⭐⭐⭐⭐⭐ “Fast, affordable, reliable.” – James L.</p>
-
-<p>⭐⭐⭐⭐⭐ “Best landscapers in town.” – Carlos R.</p>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Request a Free Quote</h2>
-
-<form action="https://formsubmit.co/Izzyscapelandscapingpros@gmail.com" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
+<p>✔ Keeps pests away</p>
+<p>✔ Protects landscaping investment</p>
+<p>✔ Creates peaceful outdoor space</p>
+</div></section><!-- REVIEWS --><section><h2>Customer Reviews</h2><div class="why">
+<p>⭐⭐⭐⭐⭐ "Amazing service!" – Maria G.</p>
+<p>⭐⭐⭐⭐⭐ "Very professional." – James L.</p>
+<p>⭐⭐⭐⭐⭐ "Highly recommend." – Carlos R.</p>
+</div></section><!-- CONTACT --><section id="contact"><h2>Request Free Quote</h2><form action="https://formsubmit.co/Izzyscapelandscapingpros@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
+<input type="tel" name="phone" placeholder="Your Phone" required><textarea name="message" placeholder="What service do you need?" required></textarea><button type="submit" class="btn" style="width:100%;">Send Request</button>
 
-<input type="tel" name="phone" placeholder="Your Phone" required>
-
-<textarea name="message" placeholder="What service do you need?" required></textarea>
-
-<button type="submit" class="btn" style="width:100%;">Send Request</button>
-
-</form>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>Call or Text</p>
-
-<p><strong>(510) 571-7801</strong></p>
-
-<p>Email:
+</form></section><!-- FOOTER --><footer><p>For further assistance, call or text</p>
+<p><strong>(510) 571-7801</strong></p><p>Email:
 <a href="mailto:Izzyscapelandscapingpros@gmail.com" style="color:#ffd600;">
 Izzyscapelandscapingpros@gmail.com
 </a>
-</p>
-
-<p>© 2026 IzzyScape Professionals</p>
-
-</footer>
-
-
-</body>
+</p><p>© 2026 IzzyScape Professionals</p></footer></body>
 </html>

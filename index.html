@@ -1,200 +1,366 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>IzzyScape Professionals</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f3d2e;
-  color: white;
+<title>IzzyScape Professionals</title><style>
+*{
+  box-sizing:border-box;
 }
 
-  <header style="background:#0f2f1e;color:white;text-align:center;padding:40px 20px;">
-
-  <img src="file_00000000736871fdb9cd01a72c261629 (2).png"
-       alt="IzzyScape Professionals Logo"
-       style="max-width:320px;width:100%;margin-bottom:15px;">
-  </p>
-
-  <a href="#services"
-     style="display:inline-block;
-            margin-top:20px;
-            background:#4CAF50;
-            color:white;
-            padding:12px 25px;
-            border-radius:25px;
-            text-decoration:none;
-            font-size:18px;">
-    Get a Free Quote
-  </a>
-
-</header>
-
-nav {
-  background: #0b2e20;
-  padding: 10px;
-  text-align: center;
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f6f4;
+  color:#222;
 }
 
-nav a {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
-  font-weight: bold;
+/* NAVBAR */
+nav{
+  background:#0f2f1e;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 25px;
 }
 
-section {
-  padding: 20px;
+nav .logo{
+  font-size:22px;
+  font-weight:bold;
 }
 
-.card {
-  background: #1e8449;
-  padding: 15px;
-  margin: 15px 0;
-  border-radius: 10px;
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 12px;
+  font-weight:bold;
 }
 
-button {
-  background: #f4d03f;
-  border: none;
-  padding: 10px 15px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
+nav a:hover{
+  color:#7CFF7C;
 }
 
-input, textarea, select {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  border-radius: 5px;
-  border: none;
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url("hero.jpg") center/cover no-repeat;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:40px 20px;
 }
 
-footer {
-  background: #0b2e20;
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
+.hero-content{
+  max-width:850px;
 }
-</style>
-</head>
 
-<body>
+.hero img{
+  max-width:280px;
+  margin-bottom:15px;
+}
 
-<header>
-  <img src="file_00000000736871fdb9cd01a72c261629 (2).png" 
-     alt="IzzyScape Professionals Logo" 
-     style="max-width:280px;width:100%;margin-bottom:15px;">
-  <h1>IzzyScape Professionals</h1>
-  <p>Turning Yards Into Masterpieces</p>
-</header>
+.hero h1{
+  font-size:46px;
+  margin:10px 0;
+}
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#plans">Plans</a>
-  <a href="#account">Account</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#contact">Contact</a>
-</nav>
+.hero p{
+  font-size:20px;
+  margin-bottom:25px;
+}
 
-<section id="home">
-<h2>Welcome</h2>
-<div class="card">
-<p>We provide affordable professional landscaping services throughout the Bay Area. Clean, healthy, beautiful yards increase property value and curb appeal.</p>
+.hero .btn{
+  background:#4CAF50;
+  color:white;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.hero .btn:hover{
+  background:#3d9141;
+}
+
+/* SECTION */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:32px;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 8px rgba(0,0,0,0.15);
+  transition:transform 0.2s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:18px;
+  text-align:center;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.card p{
+  font-size:15px;
+}
+
+.price{
+  font-size:22px;
+  color:#2e7d32;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.card button{
+  background:#4CAF50;
+  color:white;
+  border:none;
+  padding:10px 22px;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.card button:hover{
+  background:#3d9141;
+}
+
+/* SPECIAL */
+.special{
+  background:#10351f;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.special h2{
+  font-size:36px;
+}
+
+.special .price-big{
+  font-size:48px;
+  color:#7CFF7C;
+}
+
+/* PLANS */
+.plans{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.plan{
+  background:#0f2f1e;
+  color:white;
+  padding:30px 20px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.plan h3{
+  margin-bottom:10px;
+}
+
+.plan .price{
+  color:#7CFF7C;
+}
+
+/* REVIEWS */
+.reviews-form{
+  max-width:600px;
+  margin:auto;
+}
+
+.reviews-form input,
+.reviews-form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* FOOTER */
+footer{
+  background:#0f2f1e;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+
+footer .phone{
+  font-size:26px;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+footer a{
+  color:#7CFF7C;
+  text-decoration:none;
+}
+
+</style></head>
+<body><!-- NAV --><nav>
+  <div class="logo">IzzyScape Professionals</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#plans">Plans</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav><!-- HERO --><section class="hero" id="home">
+  <div class="hero-content">
+    <img src="logo.png" alt="IzzyScape Logo">
+    <h1>Top Rated Landscaping & Pressure Washing</h1>
+    <p>Transform your front and back yard with professional Bay Area landscaping.</p>
+    <a href="#services" class="btn">Get Free Estimate</a>
+  </div>
+</section><!-- SERVICES --><section id="services">
+  <h2>Select Our Services</h2>  <div class="services"><div class="card">
+  <img src="service1.jpg">
+  <div class="card-content">
+    <h3>Lawn Care & Sod</h3>
+    <p>Mowing, seeding, fertilizing, sod install.</p>
+    <div class="price">$200+</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
-</section>
-
-<section id="services">
-<h2>Our Services</h2>
-
-<div class="card">Lawn Mowing & Edging – $60+</div>
-<div class="card">Weed Removal – $75+</div>
-<div class="card">Bush & Hedge Trimming – $80+</div>
-<div class="card">Tree Trimming – $150+</div>
-<div class="card">Mulching – $120+</div>
-<div class="card">Sod Installation – $3/sq ft</div>
-<div class="card">Irrigation Repair – $90+</div>
-<div class="card">Yard Cleanup – $150+</div>
-<div class="card">Flower Bed Design – $100+</div>
-<div class="card">Rock & Gravel Install – $200+</div>
-
-<h3>Pressure Washing</h3>
-<div class="card">Driveway – $40</div>
-<div class="card">Patio – $30</div>
-<div class="card">Whole House – $200</div>
-<div class="card">Garage/Shed – $80</div>
-
-<h3>Special</h3>
-<div class="card"><strong>Front + Back Yard Special – $499</strong></div>
-
-</section>
-
-<section id="plans">
-<h2>Maintenance Plans</h2>
 
 <div class="card">
-<h3>Monthly Plan</h3>
-<p>$250 per month – One visit per month</p>
-<ul>
-<li>Mowing</li>
-<li>Trimming</li>
-<li>Weeding</li>
-<li>Cleanup</li>
-</ul>
-<button>Select Plan</button>
+  <img src="service2.jpg">
+  <div class="card-content">
+    <h3>Garden Design & Mulching</h3>
+    <p>Flower beds, mulch, plants.</p>
+    <div class="price">$4,500+</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
-
-</section>
-
-<section id="account">
-<h2>Create Account</h2>
 
 <div class="card">
-<form>
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email" required>
-<input type="password" placeholder="Password" required>
-<button>Create Account</button>
-</form>
+  <img src="service3.jpg">
+  <div class="card-content">
+    <h3>Tree & Shrub Trimming</h3>
+    <p>Pruning, shaping, removal.</p>
+    <div class="price">$200</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
-</section>
-
-<section id="reviews">
-<h2>Customer Reviews</h2>
 
 <div class="card">
-<form>
-<input type="text" placeholder="Your Name">
-<textarea placeholder="Write your review"></textarea>
-<button>Submit Review</button>
-</form>
+  <img src="service4.jpg">
+  <div class="card-content">
+    <h3>Yard Cleanup & Hauling</h3>
+    <p>Debris removal, leaf cleanup.</p>
+    <div class="price">$300</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
-</section>
-
-<section id="contact">
-<h2>Contact Us</h2>
 
 <div class="card">
-<p><strong>For further assistance, please call or text now to speak with a live representative</strong></p>
-<p style="font-size:24px;font-weight:bold;">📞 (510) 571-7801</p>
-
-<p>Email:
-<a href="mailto:Izzyscapelandscapingpros@gmail.com" style="color:yellow;">
-Izzyscapelandscapingpros@gmail.com
-</a>
-</p>
+  <img src="service5.jpg">
+  <div class="card-content">
+    <h3>Driveway Pressure Wash</h3>
+    <p>Deep clean concrete surfaces.</p>
+    <div class="price">$40</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
-</section>
 
-<footer>
-<p>© 2026 IzzyScape Professionals</p>
-</footer>
+<div class="card">
+  <img src="service6.jpg">
+  <div class="card-content">
+    <h3>Patio Pressure Wash</h3>
+    <p>Restore patios and walkways.</p>
+    <div class="price">$30</div>
+    <button>Add to Cart</button>
+  </div>
+</div>
 
-</body>
+<div class="card">
+  <img src="service7.jpg">
+  <div class="card-content">
+    <h3>Whole House Wash</h3>
+    <p>Exterior siding wash.</p>
+    <div class="price">$200</div>
+    <button>Add to Cart</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="service8.jpg">
+  <div class="card-content">
+    <h3>Garage / Shed Wash</h3>
+    <p>Clean outdoor structures.</p>
+    <div class="price">$80</div>
+    <button>Add to Cart</button>
+  </div>
+</div>
+
+  </div>
+</section><!-- SPECIAL --><section class="special">
+  <h2>Front & Back Yard Special</h2>
+  <div class="price-big">$499</div>
+  <p>Complete cleanup and landscaping for both yards.</p>
+  <a href="#contact" class="btn">Order Special</a>
+</section><!-- PLANS --><section id="plans">
+  <h2>Maintenance Plans</h2>  <div class="plans"><div class="plan">
+  <h3>Monthly Care</h3>
+  <div class="price">$250 / Month</div>
+  <p>One visit per month</p>
+</div>
+
+<div class="plan">
+  <h3>Weekly Care</h3>
+  <div class="price">Custom Quote</div>
+  <p>Ongoing weekly service</p>
+</div>
+
+  </div>
+</section><!-- REVIEWS --><section id="reviews">
+  <h2>Customer Reviews</h2>  <div class="reviews-form">
+    <input type="text" placeholder="Your Name">
+    <textarea rows="4" placeholder="Write your review..."></textarea>
+    <button class="btn">Submit Review</button>
+  </div>
+</section><!-- FOOTER --><footer id="contact">  <p>For further assistance, please call or text now to speak with a live representative</p><span class="phone">(510) 571-7801</span>
+
+  <p>
+    Or email us at 
+    <a href="mailto:Izzyscapelandscapingpros@gmail.com">
+      Izzyscapelandscapingpros@gmail.com
+    </a>
+  </p>  <p>© 2026 IzzyScape Professionals</p></footer></body>
 </html>

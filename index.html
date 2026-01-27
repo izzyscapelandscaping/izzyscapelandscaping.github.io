@@ -1,324 +1,366 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>IzzyScape Professionals</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f3b2e;
-    color: white;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IzzyScape Professionals</title><style>
+*{
+  box-sizing:border-box;
 }
 
-/* HEADER */
-
-header {
-    background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
-    padding: 80px 20px;
-    text-align: center;
-    color: black;
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f6f4;
+  color:#222;
 }
 
-header h1,
-header p {
-    color: black;
+/* NAVBAR */
+nav{
+  background:#0f2f1e;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 25px;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+nav .logo{
+  font-size:22px;
+  font-weight:bold;
 }
 
-header p {
-    font-size: 18px;
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 12px;
+  font-weight:bold;
 }
 
-.btn {
-    background: #39b54a;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: bold;
+nav a:hover{
+  color:#7CFF7C;
 }
 
-/* SECTIONS */
-
-section {
-    padding: 40px 15px;
-    max-width: 1200px;
-    margin: auto;
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url("hero.jpg") center/cover no-repeat;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:40px 20px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.hero-content{
+  max-width:850px;
 }
 
-/* SERVICE GRID */
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+.hero img{
+  max-width:280px;
+  margin-bottom:15px;
 }
 
-.card {
-    background: #155944;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 10px black;
+.hero h1{
+  font-size:46px;
+  margin:10px 0;
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+.hero p{
+  font-size:20px;
+  margin-bottom:25px;
 }
 
-.card-content {
-    padding: 15px;
+.hero .btn{
+  background:#4CAF50;
+  color:white;
+  padding:14px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
 }
 
-.card h3 {
-    margin: 5px 0;
+.hero .btn:hover{
+  background:#3d9141;
 }
 
-.price {
-    color: #7dff9a;
-    font-weight: bold;
+/* SECTION */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:32px;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 8px rgba(0,0,0,0.15);
+  transition:transform 0.2s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:18px;
+  text-align:center;
+}
+
+.card h3{
+  margin:10px 0;
+}
+
+.card p{
+  font-size:15px;
+}
+
+.price{
+  font-size:22px;
+  color:#2e7d32;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.card button{
+  background:#4CAF50;
+  color:white;
+  border:none;
+  padding:10px 22px;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.card button:hover{
+  background:#3d9141;
+}
+
+/* SPECIAL */
+.special{
+  background:#10351f;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.special h2{
+  font-size:36px;
+}
+
+.special .price-big{
+  font-size:48px;
+  color:#7CFF7C;
+}
+
+/* PLANS */
+.plans{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.plan{
+  background:#0f2f1e;
+  color:white;
+  padding:30px 20px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.plan h3{
+  margin-bottom:10px;
+}
+
+.plan .price{
+  color:#7CFF7C;
+}
+
+/* REVIEWS */
+.reviews-form{
+  max-width:600px;
+  margin:auto;
+}
+
+.reviews-form input,
+.reviews-form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
 }
 
 /* FOOTER */
-
-footer {
-    background: #09261d;
-    padding: 25px;
-    text-align: center;
-    margin-top: 40px;
+footer{
+  background:#0f2f1e;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
 }
 
-</style>
-</head>
+footer .phone{
+  font-size:26px;
+  font-weight:bold;
+  margin:10px 0;
+}
 
-<body>
+footer a{
+  color:#7CFF7C;
+  text-decoration:none;
+}
 
-<!-- HEADER -->
-
-<header>
-    <h1>IzzyScape Professionals</h1>
-    <p>Top Rated Landscaping & Pressure Washing in the Bay Area</p>
+</style></head>
+<body><!-- NAV --><nav>
+  <div class="logo">IzzyScape Professionals</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#plans">Plans</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav><!-- HERO --><section class="hero" id="home">
+  <div class="hero-content">
+    <img src="logo.png" alt="IzzyScape Logo">
+    <h1>Top Rated Landscaping & Pressure Washing</h1>
+    <p>Transform your front and back yard with professional Bay Area landscaping.</p>
     <a href="#services" class="btn">Get Free Estimate</a>
-</header>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2>Our Services</h2>
-
-<div class="services">
-
-<!-- Lawn -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1598514982205-f5f59bfc1bfa">
-<div class="card-content">
-<h3>Lawn Mowing & Edging</h3>
-<p class="price">$60+</p>
-</div>
-</div>
-
-<!-- Weed -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea">
-<div class="card-content">
-<h3>Weed Removal</h3>
-<p class="price">$75+</p>
-</div>
-</div>
-
-<!-- Bush -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1589927986089-35812386e9f5">
-<div class="card-content">
-<h3>Bush & Hedge Trimming</h3>
-<p class="price">$80+</p>
-</div>
-</div>
-
-<!-- Tree -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<div class="card-content">
-<h3>Tree Trimming</h3>
-<p class="price">$150+</p>
-</div>
-</div>
-
-<!-- Mulch -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593118247619-e2d6f056869e">
-<div class="card-content">
-<h3>Mulching</h3>
-<p class="price">$120+</p>
-</div>
-</div>
-
-<!-- Sod -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23">
-<div class="card-content">
-<h3>Sod Installation</h3>
-<p class="price">$3 / sq ft</p>
-</div>
-</div>
-
-<!-- Irrigation -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b">
-<div class="card-content">
-<h3>Irrigation Repair</h3>
-<p class="price">$90+</p>
-</div>
-</div>
-
-<!-- Cleanup -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1604014237744-7bb9fdc1f0c0">
-<div class="card-content">
-<h3>Yard Cleanup</h3>
-<p class="price">$150+</p>
-</div>
-</div>
-
-<!-- Flower -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae">
-<div class="card-content">
-<h3>Flower Bed Design</h3>
-<p class="price">$100+</p>
-</div>
-</div>
-
-<!-- Rock -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed">
-<div class="card-content">
-<h3>Rock & Gravel Install</h3>
-<p class="price">$200+</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRESSURE WASHING -->
-
-<section>
-
-<h2>Pressure Washing</h2>
-
-<div class="services">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<div class="card-content">
-<h3>Driveway</h3>
-<p class="price">$40</p>
-</div>
+  </div>
+</section><!-- SERVICES --><section id="services">
+  <h2>Select Our Services</h2>  <div class="services"><div class="card">
+  <img src="service1.jpg">
+  <div class="card-content">
+    <h3>Lawn Care & Sod</h3>
+    <p>Mowing, seeding, fertilizing, sod install.</p>
+    <div class="price">$200+</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a">
-<div class="card-content">
-<h3>Patio</h3>
-<p class="price">$30</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1597006340902-2f7fdb7b7cfa">
-<div class="card-content">
-<h3>Whole House</h3>
-<p class="price">$200</p>
-</div>
+  <img src="service2.jpg">
+  <div class="card-content">
+    <h3>Garden Design & Mulching</h3>
+    <p>Flower beds, mulch, plants.</p>
+    <div class="price">$4,500+</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1581578017426-3d4bd3a81e6b">
-<div class="card-content">
-<h3>Garage / Shed</h3>
-<p class="price">$80</p>
+  <img src="service3.jpg">
+  <div class="card-content">
+    <h3>Tree & Shrub Trimming</h3>
+    <p>Pruning, shaping, removal.</p>
+    <div class="price">$200</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SPECIAL -->
-
-<section>
-
-<h2>Special</h2>
-
-<div class="services">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4">
-<div class="card-content">
-<h3>Front + Back Yard Special</h3>
-<p class="price">$499</p>
+  <img src="service4.jpg">
+  <div class="card-content">
+    <h3>Yard Cleanup & Hauling</h3>
+    <p>Debris removal, leaf cleanup.</p>
+    <div class="price">$300</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- MAINTENANCE -->
-
-<section>
-
-<h2>Maintenance Plan</h2>
-
-<div class="services">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae">
-<div class="card-content">
-<h3>Monthly Service</h3>
-<p class="price">$250 / Month</p>
-<p>One visit per month</p>
+  <img src="service5.jpg">
+  <div class="card-content">
+    <h3>Driveway Pressure Wash</h3>
+    <p>Deep clean concrete surfaces.</p>
+    <div class="price">$40</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
+
+<div class="card">
+  <img src="service6.jpg">
+  <div class="card-content">
+    <h3>Patio Pressure Wash</h3>
+    <p>Restore patios and walkways.</p>
+    <div class="price">$30</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
 
+<div class="card">
+  <img src="service7.jpg">
+  <div class="card-content">
+    <h3>Whole House Wash</h3>
+    <p>Exterior siding wash.</p>
+    <div class="price">$200</div>
+    <button>Add to Cart</button>
+  </div>
 </div>
 
-</section>
+<div class="card">
+  <img src="service8.jpg">
+  <div class="card-content">
+    <h3>Garage / Shed Wash</h3>
+    <p>Clean outdoor structures.</p>
+    <div class="price">$80</div>
+    <button>Add to Cart</button>
+  </div>
+</div>
 
+  </div>
+</section><!-- SPECIAL --><section class="special">
+  <h2>Front & Back Yard Special</h2>
+  <div class="price-big">$499</div>
+  <p>Complete cleanup and landscaping for both yards.</p>
+  <a href="#contact" class="btn">Order Special</a>
+</section><!-- PLANS --><section id="plans">
+  <h2>Maintenance Plans</h2>  <div class="plans"><div class="plan">
+  <h3>Monthly Care</h3>
+  <div class="price">$250 / Month</div>
+  <p>One visit per month</p>
+</div>
 
-<!-- FOOTER -->
+<div class="plan">
+  <h3>Weekly Care</h3>
+  <div class="price">Custom Quote</div>
+  <p>Ongoing weekly service</p>
+</div>
 
-<footer>
+  </div>
+</section><!-- REVIEWS --><section id="reviews">
+  <h2>Customer Reviews</h2>  <div class="reviews-form">
+    <input type="text" placeholder="Your Name">
+    <textarea rows="4" placeholder="Write your review..."></textarea>
+    <button class="btn">Submit Review</button>
+  </div>
+</section><!-- FOOTER --><footer id="contact">  <p>For further assistance, please call or text now to speak with a live representative</p><span class="phone">(510) 571-7801</span>
 
-<p>IzzyScape Professionals</p>
-<p>Bay Area, California</p>
-<p>Call or Text for Free Estimate</p>
-
-</footer>
-
-</body>
+  <p>
+    Or email us at 
+    <a href="mailto:Izzyscapelandscapingpros@gmail.com">
+      Izzyscapelandscapingpros@gmail.com
+    </a>
+  </p>  <p>© 2026 IzzyScape Professionals</p></footer></body>
 </html>

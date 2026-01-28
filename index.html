@@ -7,16 +7,21 @@
 
 <title>IzzyScape Professionals</title>
 
-<!-- GOOGLE FONTS -->
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@600;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* GENERAL */
+/* RESET */
 
-body{
+*{
+box-sizing:border-box;
 margin:0;
+padding:0;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
 font-family:Poppins,Arial;
 background:#0e3b2c;
 color:white;
@@ -28,7 +33,7 @@ scroll-behavior:smooth;
 #logo{
 position:fixed;
 top:12px;
-left:20px;
+left:15px;
 z-index:4000;
 display:flex;
 flex-direction:column;
@@ -37,7 +42,7 @@ line-height:1.2;
 
 .logo-main{
 font-family:Montserrat;
-font-size:32px;
+font-size:30px;
 font-weight:900;
 color:white;
 text-shadow:2px 2px 6px rgba(0,0,0,.6);
@@ -46,7 +51,7 @@ animation:fadeIn 2s;
 
 .logo-tagline{
 font-family:'Dancing Script';
-font-size:16px;
+font-size:15px;
 color:black;
 text-shadow:1px 1px 2px white;
 }
@@ -56,8 +61,8 @@ text-shadow:1px 1px 2px white;
 #menuBtn{
 position:fixed;
 top:15px;
-right:20px;
-font-size:28px;
+right:15px;
+font-size:26px;
 cursor:pointer;
 z-index:4000;
 background:none;
@@ -68,10 +73,10 @@ color:white;
 #sideMenu{
 position:fixed;
 top:0;
-right:-280px;
-width:260px;
+right:-260px;
+width:240px;
 height:100%;
-background:rgba(255,255,255,.9);
+background:rgba(255,255,255,.95);
 padding-top:80px;
 transition:.3s;
 z-index:3500;
@@ -92,16 +97,25 @@ background:#eee;
 /* HEADER */
 
 header{
-background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
-padding:150px 20px;
+background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover no-repeat;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+padding:20px;
 }
 
 header h1{
-font-size:50px;
+font-size:48px;
 font-weight:900;
 color:black;
+max-width:100%;
+padding:0 10px;
 }
+
+/* BUTTON */
 
 .btn{
 background:#2e7d32;
@@ -111,15 +125,16 @@ border:none;
 border-radius:6px;
 font-weight:bold;
 cursor:pointer;
-margin-top:15px;
+margin-top:20px;
 }
 
 /* SECTIONS */
 
 section{
-padding:60px 20px;
+padding:60px 15px;
 max-width:1100px;
 margin:auto;
+width:100%;
 }
 
 h2{
@@ -137,16 +152,17 @@ background:url("https://images.unsplash.com/photo-1599423300746-b62533397364") c
 background:url("https://images.unsplash.com/photo-1562077981-4d5dfd3d33c4") center/cover fixed;
 }
 
-/* SERVICE BOX */
+/* SERVICE */
 
 .service{
-background:rgba(0,0,0,.7);
-padding:18px;
-border-radius:10px;
-margin-bottom:15px;
+background:rgba(0,0,0,.75);
+padding:16px;
+border-radius:8px;
+margin-bottom:12px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+gap:10px;
 }
 
 /* CALL BUTTON */
@@ -177,6 +193,7 @@ display:none;
 justify-content:center;
 align-items:center;
 z-index:5000;
+padding:15px;
 }
 
 #estimateBox{
@@ -184,8 +201,8 @@ background:white;
 color:black;
 padding:25px;
 border-radius:10px;
-width:90%;
-max-width:400px;
+width:100%;
+max-width:380px;
 }
 
 #closeEstimate{
@@ -198,9 +215,9 @@ font-size:20px;
 
 .reviewBox{
 background:#145a3a;
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
+padding:18px;
+border-radius:8px;
+margin-bottom:12px;
 }
 
 /* FOOTER */
@@ -208,7 +225,7 @@ margin-bottom:15px;
 footer{
 background:#0a291f;
 text-align:center;
-padding:30px;
+padding:25px 15px;
 }
 
 /* ANIMATION */
@@ -216,6 +233,15 @@ padding:30px;
 @keyframes fadeIn{
 from{opacity:0;}
 to{opacity:1;}
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.logo-main{font-size:26px;}
+header h1{font-size:38px;}
+
 }
 
 </style>
@@ -227,7 +253,7 @@ to{opacity:1;}
 
 <div id="logo">
 <div class="logo-main">🌿 IzzyScape Professionals</div>
-<div class="logo-tagline">“Turning Yards Into Masterpieces”</div>
+<div class="logo-tagline">Turning Yards Into Masterpieces</div>
 </div>
 
 <!-- MENU -->
@@ -319,8 +345,8 @@ to{opacity:1;}
 
 <h2>Online Booking</h2>
 
-<input type="date">
-<br><br>
+<input type="date"><br><br>
+
 <button class="btn">Book Appointment</button>
 
 </section>
@@ -362,9 +388,9 @@ to{opacity:1;}
 <iframe
 width="100%"
 height="300"
-frameborder="0"
 style="border:0"
-src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&t=&z=10&ie=UTF8&iwloc=&output=embed">
+loading="lazy"
+src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&z=10&output=embed">
 </iframe>
 
 </section>
@@ -436,11 +462,11 @@ Izzyscapelandscapingpros@gmail.com
 
 function toggleMenu(){
 let m=document.getElementById("sideMenu");
-m.style.right=(m.style.right=="0px")?"-280px":"0px";
+m.style.right=(m.style.right=="0px")?"-260px":"0px";
 }
 
 function closeMenu(){
-document.getElementById("sideMenu").style.right="-280px";
+document.getElementById("sideMenu").style.right="-260px";
 }
 
 document.addEventListener("click",function(e){
@@ -463,16 +489,16 @@ function addReview(e){
 
 e.preventDefault();
 
-let name=document.getElementById("rName").value;
-let stars=document.getElementById("rStars").value;
-let text=document.getElementById("rText").value;
+let name=rName.value;
+let stars=rStars.value;
+let text=rText.value;
 
 let box=document.createElement("div");
 box.className="reviewBox";
 
 box.innerHTML="<strong>"+name+"</strong><br>"+stars+"<br>"+text;
 
-document.getElementById("reviewList").prepend(box);
+reviewList.prepend(box);
 
 e.target.reset();
 

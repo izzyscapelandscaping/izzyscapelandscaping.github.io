@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>IzzyScape Professionals</title>
 
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<!-- GOOGLE FONTS -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@600;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
+
+/* GENERAL */
 
 body{
 margin:0;
-font-family:'Poppins',Arial,sans-serif;
+font-family:Poppins,Arial;
 background:#0e3b2c;
 color:white;
 scroll-behavior:smooth;
@@ -26,111 +30,88 @@ position:fixed;
 top:12px;
 left:20px;
 z-index:4000;
-font-family:'Montserrat','Poppins',Arial,sans-serif;
 display:flex;
 flex-direction:column;
 line-height:1.2;
 }
 
-/* Main Name */
-
 .logo-main{
-font-size:30px;
+font-family:Montserrat;
+font-size:32px;
 font-weight:900;
 color:white;
-letter-spacing:1px;
-text-shadow:2px 2px 6px rgba(0,0,0,0.6);
-animation:logoFade 2s ease-in-out;
+text-shadow:2px 2px 6px rgba(0,0,0,.6);
+animation:fadeIn 2s;
 }
-
-/* Tagline */
 
 .logo-tagline{
-font-family:'Dancing Script','Playfair Display',cursive;
+font-family:'Dancing Script';
 font-size:16px;
-font-style:italic;
 color:black;
-margin-top:2px;
-text-shadow:1px 1px 2px rgba(255,255,255,0.6);
+text-shadow:1px 1px 2px white;
 }
 
-/* MENU BUTTON */
+/* MENU */
 
 #menuBtn{
 position:fixed;
 top:15px;
 right:20px;
-background:transparent;
-border:none;
-font-size:32px;
-color:white;
+font-size:28px;
 cursor:pointer;
 z-index:4000;
+background:none;
+border:none;
+color:white;
 }
-
-/* SIDE MENU */
 
 #sideMenu{
 position:fixed;
 top:0;
-right:-300px;
-width:280px;
+right:-280px;
+width:260px;
 height:100%;
-background:rgba(255,255,255,0.95);
-padding:30px 20px;
-transition:0.4s;
+background:rgba(255,255,255,.9);
+padding-top:80px;
+transition:.3s;
 z-index:3500;
-box-shadow:-3px 0 10px rgba(0,0,0,0.3);
 }
 
 #sideMenu a{
 display:block;
-padding:14px;
-text-decoration:none;
+padding:15px;
 color:black;
-font-weight:700;
-border-radius:5px;
+text-decoration:none;
+font-weight:600;
 }
 
 #sideMenu a:hover{
 background:#eee;
 }
 
-/* HERO */
+/* HEADER */
 
 header{
-background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-padding:180px 20px;
+background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
+padding:150px 20px;
 text-align:center;
 }
 
-header h1{display:none;}
-
-#tagline{
-font-family:'Playfair Display','Dancing Script',cursive;
-font-size:28px;
-font-style:italic;
+header h1{
+font-size:50px;
+font-weight:900;
 color:black;
-margin-top:15px;
-letter-spacing:1px;
-text-shadow:1px 1px 2px rgba(255,255,255,0.6);
 }
-
-/* BUTTON */
 
 .btn{
 background:#2e7d32;
 color:white;
-padding:14px 28px;
+padding:12px 25px;
 border:none;
 border-radius:6px;
-font-weight:700;
+font-weight:bold;
 cursor:pointer;
-font-size:16px;
-}
-
-.btn:hover{
-background:#256528;
+margin-top:15px;
 }
 
 /* SECTIONS */
@@ -143,66 +124,29 @@ margin:auto;
 
 h2{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-/* SERVICES */
+/* BACKGROUND SECTIONS */
 
 #services{
-background:url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
-border-radius:12px;
+background:url("https://images.unsplash.com/photo-1599423300746-b62533397364") center/cover fixed;
 }
 
 #washing{
-background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
-border-radius:12px;
+background:url("https://images.unsplash.com/photo-1562077981-4d5dfd3d33c4") center/cover fixed;
 }
 
+/* SERVICE BOX */
+
 .service{
-background:rgba(0,0,0,0.75);
+background:rgba(0,0,0,.7);
 padding:18px;
 border-radius:10px;
 margin-bottom:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
-
-/* FORM */
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin:8px 0;
-border-radius:5px;
-border:none;
-font-size:15px;
-}
-
-/* REVIEWS */
-
-.reviewBox{
-background:#145a3a;
-padding:20px;
-border-radius:10px;
-margin:10px 0;
-}
-
-/* MAP */
-
-iframe{
-width:100%;
-height:300px;
-border:0;
-border-radius:10px;
-}
-
-/* FOOTER */
-
-footer{
-background:#0a291f;
-padding:30px;
-text-align:center;
 }
 
 /* CALL BUTTON */
@@ -215,12 +159,12 @@ background:#2e7d32;
 color:white;
 padding:12px 20px;
 border-radius:30px;
-font-weight:700;
 text-decoration:none;
+font-weight:bold;
 z-index:3000;
 }
 
-/* ESTIMATE POPUP */
+/* POPUP */
 
 #estimatePopup{
 position:fixed;
@@ -228,7 +172,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,.7);
 display:none;
 justify-content:center;
 align-items:center;
@@ -242,16 +186,36 @@ padding:25px;
 border-radius:10px;
 width:90%;
 max-width:400px;
-position:relative;
 }
 
 #closeEstimate{
-position:absolute;
-top:10px;
-right:15px;
+float:right;
 cursor:pointer;
 font-size:20px;
-font-weight:900;
+}
+
+/* REVIEWS */
+
+.reviewBox{
+background:#145a3a;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0a291f;
+text-align:center;
+padding:30px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
 }
 
 </style>
@@ -260,12 +224,14 @@ font-weight:900;
 <body>
 
 <!-- LOGO -->
+
 <div id="logo">
-<span class="logo-main">🌿 IzzyScape Professionals</span>
-<span class="logo-tagline">“Turning Yards Into Masterpieces”</span>
+<div class="logo-main">🌿 IzzyScape Professionals</div>
+<div class="logo-tagline">“Turning Yards Into Masterpieces”</div>
 </div>
 
 <!-- MENU -->
+
 <button id="menuBtn" onclick="toggleMenu()">☰</button>
 
 <div id="sideMenu">
@@ -273,23 +239,19 @@ font-weight:900;
 <a href="#home" onclick="closeMenu()">Home</a>
 <a href="#services" onclick="closeMenu()">Services</a>
 <a href="#washing" onclick="closeMenu()">Pressure Wash</a>
-<a href="#special" onclick="closeMenu()">Special</a>
+<a href="#plans" onclick="closeMenu()">Plans</a>
 <a href="#booking" onclick="closeMenu()">Booking</a>
 <a href="#reviews" onclick="closeMenu()">Reviews</a>
-<a href="#map" onclick="closeMenu()">Service Area</a>
+<a href="#map" onclick="closeMenu()">Location</a>
 <a href="#contact" onclick="closeMenu()">Contact</a>
 
 </div>
 
-<!-- HERO -->
+<!-- HEADER -->
 
 <header id="home">
 
-<div id="tagline">
-“Turning Yards Into Masterpieces”
-</div>
-
-<br><br>
+<h1>Bay Area Landscaping Experts</h1>
 
 <button class="btn" onclick="openEstimate()">Get Free Estimate</button>
 
@@ -301,53 +263,40 @@ font-weight:900;
 
 <h2>Landscaping Services</h2>
 
-<div class="service"><span>Lawn Mowing – $60+</span><button>Add</button></div>
-<div class="service"><span>Weed Removal – $75+</span><button>Add</button></div>
-<div class="service"><span>Hedge Trimming – $80+</span><button>Add</button></div>
-<div class="service"><span>Tree Trimming – $150+</span><button>Add</button></div>
-<div class="service"><span>Mulching – $120+</span><button>Add</button></div>
-<div class="service"><span>Sod Install – $3/sqft</span><button>Add</button></div>
-<div class="service"><span>Cleanup – $150+</span><button>Add</button></div>
-<div class="service"><span>Rock Install – $200+</span><button>Add</button></div>
+<div class="service">Lawn Mowing – $60 <button>Add</button></div>
+<div class="service">Weed Removal – $75 <button>Add</button></div>
+<div class="service">Bush Trimming – $80 <button>Add</button></div>
+<div class="service">Tree Trimming – $150 <button>Add</button></div>
+<div class="service">Mulching – $120 <button>Add</button></div>
+<div class="service">Sod Install – $3/sqft <button>Add</button></div>
+<div class="service">Irrigation Repair – $90 <button>Add</button></div>
+<div class="service">Cleanup – $150 <button>Add</button></div>
+<div class="service">Flower Beds – $100 <button>Add</button></div>
+<div class="service">Rock Install – $200 <button>Add</button></div>
 
 </section>
 
-<!-- PRESSURE -->
+<!-- WASHING -->
 
 <section id="washing">
 
 <h2>Pressure Washing</h2>
 
-<div class="service"><span>Driveway – $40</span><button>Add</button></div>
-<div class="service"><span>Patio – $30</span><button>Add</button></div>
-<div class="service"><span>House – $200</span><button>Add</button></div>
-<div class="service"><span>Garage – $80</span><button>Add</button></div>
+<div class="service">Driveway – $40 <button>Add</button></div>
+<div class="service">Patio – $30 <button>Add</button></div>
+<div class="service">House – $200 <button>Add</button></div>
+<div class="service">Garage – $80 <button>Add</button></div>
 
 </section>
 
-<!-- SPECIAL -->
+<!-- PLANS -->
 
-<section id="special">
+<section id="plans">
 
-<h2>Special Offer</h2>
+<h2>Maintenance & Specials</h2>
 
-<div class="service">
-<span>Front + Back Yard – $499</span>
-<button>Add</button>
-</div>
-
-</section>
-
-<!-- MAINTENANCE -->
-
-<section>
-
-<h2>Maintenance Plan</h2>
-
-<div class="service">
-<span>$250 / Month (1 Visit)</span>
-<button>Add</button>
-</div>
+<div class="service">Monthly Plan – $250 <button>Add</button></div>
+<div class="service">Front+Back Special – $499 <button>Add</button></div>
 
 </section>
 
@@ -357,15 +306,10 @@ font-weight:900;
 
 <h2>Why Yard Care Matters</h2>
 
-<div class="reviewBox">
-
-✔ Raises home value  
-<br>✔ Stops weeds & pests  
-<br>✔ Improves curb appeal  
-<br>✔ Keeps lawn healthy  
-<br>✔ Makes home stand out  
-
-</div>
+<p>✔ Increases home value</p>
+<p>✔ Prevents weeds</p>
+<p>✔ Keeps property clean</p>
+<p>✔ Creates relaxation space</p>
 
 </section>
 
@@ -373,37 +317,11 @@ font-weight:900;
 
 <section id="booking">
 
-<h2>Book & Pay</h2>
+<h2>Online Booking</h2>
 
-<form action="https://formsubmit.co/Izzyscapelandscapingpros@gmail.com" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-
-<input name="name" placeholder="Name" required>
-<input name="email" type="email" placeholder="Email" required>
-<input name="phone" placeholder="Phone" required>
-<input type="date" name="date" required>
-
-<select id="price">
-<option value="0">Select Service</option>
-<option value="60">Lawn $60</option>
-<option value="75">Weeds $75</option>
-<option value="150">Tree $150</option>
-<option value="250">Monthly $250</option>
-<option value="499">Special $499</option>
-</select>
-
-<p>Total: $<span id="total">0</span></p>
-
-<textarea name="details" placeholder="Details"></textarea>
-
-<button class="btn">Send Request</button>
-
-</form>
-
-<br>
-
-<div id="paypal-button-container"></div>
+<input type="date">
+<br><br>
+<button class="btn">Book Appointment</button>
 
 </section>
 
@@ -413,16 +331,23 @@ font-weight:900;
 
 <h2>Customer Reviews</h2>
 
-<input id="rName" placeholder="Name">
+<form onsubmit="addReview(event)">
+
+<input id="rName" placeholder="Name" required><br><br>
 
 <select id="rStars">
-<option>⭐</option><option>⭐⭐</option><option>⭐⭐⭐</option>
-<option>⭐⭐⭐⭐</option><option>⭐⭐⭐⭐⭐</option>
-</select>
+<option>5 ⭐⭐⭐⭐⭐</option>
+<option>4 ⭐⭐⭐⭐</option>
+<option>3 ⭐⭐⭐</option>
+<option>2 ⭐⭐</option>
+<option>1 ⭐</option>
+</select><br><br>
 
-<textarea id="rText" placeholder="Review"></textarea>
+<textarea id="rText" placeholder="Review"></textarea><br><br>
 
-<button class="btn" onclick="addReview()">Submit</button>
+<button class="btn">Submit</button>
+
+</form>
 
 <div id="reviewList"></div>
 
@@ -432,25 +357,42 @@ font-weight:900;
 
 <section id="map">
 
-<h2>Service Area – Bay Area</h2>
+<h2>Serving All Bay Area</h2>
 
-<iframe src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area%20California&t=&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe
+width="100%"
+height="300"
+frameborder="0"
+style="border:0"
+src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&t=&z=10&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact & Payment</h2>
+
+<p>📞 (510) 571-7801</p>
+
+<p>
+<a href="mailto:Izzyscapelandscapingpros@gmail.com" style="color:yellow">
+Izzyscapelandscapingpros@gmail.com
+</a>
+</p>
+
+<button class="btn">Pay with PayPal</button>
 
 </section>
 
 <!-- FOOTER -->
 
-<footer id="contact">
+<footer>
 
-<p>For further assistance call or text</p>
-
-<strong style="font-size:24px">(510) 571-7801</strong>
-
-<p>Email:
-<a style="color:#ffd600" href="mailto:Izzyscapelandscapingpros@gmail.com">
-Izzyscapelandscapingpros@gmail.com
-</a>
-</p>
+<p>For assistance call or text:</p>
+<strong>(510) 571-7801</strong>
 
 <p>© 2026 IzzyScape Professionals</p>
 
@@ -460,7 +402,7 @@ Izzyscapelandscapingpros@gmail.com
 
 <a id="callBtn" href="tel:15105717801">📞 Call Now</a>
 
-<!-- ESTIMATE POPUP -->
+<!-- POPUP -->
 
 <div id="estimatePopup">
 
@@ -468,28 +410,19 @@ Izzyscapelandscapingpros@gmail.com
 
 <span id="closeEstimate" onclick="closeEstimate()">✖</span>
 
-<h3>Get Free Estimate</h3>
+<h3>Free Estimate</h3>
 
 <form action="https://formsubmit.co/Izzyscapelandscapingpros@gmail.com" method="POST">
 
-<input type="hidden" name="_captcha" value="false">
+<input name="name" placeholder="Name" required><br><br>
 
-<input name="name" placeholder="Name" required>
-<input name="phone" placeholder="Phone" required>
-<input name="address" placeholder="Address" required>
+<input name="phone" placeholder="Phone" required><br><br>
 
-<select name="service" required>
-<option>Lawn Care</option>
-<option>Cleanup</option>
-<option>Tree Trimming</option>
-<option>Pressure Washing</option>
-<option>Maintenance</option>
-<option>Other</option>
-</select>
+<input name="address" placeholder="Address" required><br><br>
 
-<textarea name="details" placeholder="Details"></textarea>
+<textarea name="details"></textarea><br><br>
 
-<button class="btn" style="width:100%">Submit</button>
+<button class="btn">Send</button>
 
 </form>
 
@@ -497,67 +430,24 @@ Izzyscapelandscapingpros@gmail.com
 
 </div>
 
-<!-- SCRIPTS -->
+<!-- SCRIPT -->
 
 <script>
 
-/* MENU */
-
 function toggleMenu(){
-
-let menu=document.getElementById("sideMenu");
-
-menu.style.right =
-menu.style.right=="0px" ? "-300px" : "0px";
-
+let m=document.getElementById("sideMenu");
+m.style.right=(m.style.right=="0px")?"-280px":"0px";
 }
 
 function closeMenu(){
-document.getElementById("sideMenu").style.right="-300px";
+document.getElementById("sideMenu").style.right="-280px";
 }
-
-/* CLOSE WHEN CLICK OUTSIDE */
 
 document.addEventListener("click",function(e){
-
-let menu=document.getElementById("sideMenu");
-let btn=document.getElementById("menuBtn");
-
-if(!menu.contains(e.target) && !btn.contains(e.target)){
-menu.style.right="-300px";
+if(!e.target.closest("#sideMenu") && !e.target.closest("#menuBtn")){
+closeMenu();
 }
-
 });
-
-/* PRICE */
-
-document.getElementById("price").onchange=function(){
-document.getElementById("total").innerText=this.value;
-}
-
-/* REVIEWS */
-
-function addReview(){
-
-let name=rName.value;
-let stars=rStars.value;
-let text=rText.value;
-
-if(!name||!text) return;
-
-let div=document.createElement("div");
-div.className="reviewBox";
-
-div.innerHTML="<b>"+name+"</b> "+stars+"<br>"+text;
-
-reviewList.prepend(div);
-
-rName.value="";
-rText.value="";
-
-}
-
-/* ESTIMATE */
 
 function openEstimate(){
 document.getElementById("estimatePopup").style.display="flex";
@@ -567,37 +457,26 @@ function closeEstimate(){
 document.getElementById("estimatePopup").style.display="none";
 }
 
-setTimeout(openEstimate,10000);
+setTimeout(openEstimate,12000);
 
-</script>
+function addReview(e){
 
-<!-- PAYPAL -->
+e.preventDefault();
 
-<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+let name=document.getElementById("rName").value;
+let stars=document.getElementById("rStars").value;
+let text=document.getElementById("rText").value;
 
-<script>
+let box=document.createElement("div");
+box.className="reviewBox";
 
-paypal.Buttons({
+box.innerHTML="<strong>"+name+"</strong><br>"+stars+"<br>"+text;
 
-createOrder:function(data,actions){
+document.getElementById("reviewList").prepend(box);
 
-let total=document.getElementById("total").innerText;
-
-return actions.order.create({
-purchase_units:[{amount:{value:total}}]
-});
-
-},
-
-onApprove:function(data,actions){
-
-return actions.order.capture().then(function(){
-alert("Payment Successful!");
-});
+e.target.reset();
 
 }
-
-}).render("#paypal-button-container");
 
 </script>
 

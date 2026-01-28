@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IzzyScape Professionals</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@600;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
-
 *{
-box-sizing:border-box;
 margin:0;
 padding:0;
+box-sizing:border-box;
 }
 
-html,body{
-width:100%;
-overflow-x:hidden;
-font-family:Poppins,Arial;
+body{
+font-family:Montserrat,Arial,sans-serif;
 background:#0e3b2c;
 color:white;
-scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
 /* LOGO */
 
 #logo{
 position:fixed;
-top:12px;
-left:15px;
-z-index:4000;
+top:10px;
+left:20px;
+z-index:5000;
 display:flex;
 flex-direction:column;
-line-height:1.2;
 }
 
 .logo-main{
-font-family:Montserrat;
 font-size:30px;
 font-weight:900;
 color:white;
-text-shadow:2px 2px 6px rgba(0,0,0,.6);
-animation:fadeIn 2s;
 }
 
-.logo-tagline{
-font-family:'Dancing Script';
+.logo-tag{
+font-family:'Dancing Script',cursive;
 font-size:15px;
 color:black;
-text-shadow:1px 1px 2px white;
 }
 
 /* MENU */
@@ -62,57 +51,64 @@ text-shadow:1px 1px 2px white;
 position:fixed;
 top:15px;
 right:15px;
+background:transparent;
+color:white;
+border:none;
 font-size:26px;
 cursor:pointer;
-z-index:4000;
-background:none;
-border:none;
-color:white;
+z-index:5000;
 }
 
 #sideMenu{
 position:fixed;
 top:0;
 right:-260px;
-width:240px;
+width:260px;
 height:100%;
-background:rgba(255,255,255,.95);
-padding-top:80px;
-transition:.3s;
-z-index:3500;
+background:rgba(255,255,255,0.9);
+color:black;
+padding:30px;
+transition:0.4s;
+z-index:4000;
 }
 
 #sideMenu a{
 display:block;
-padding:15px;
-color:black;
+margin:20px 0;
 text-decoration:none;
-font-weight:600;
+color:black;
+font-weight:bold;
 }
 
-#sideMenu a:hover{
-background:#eee;
-}
-
-/* HEADER */
+/* HERO */
 
 header{
-background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover no-repeat;
 min-height:100vh;
+background:url("https://images.unsplash.com/photo-1568605114967-8130f3a36994") center/cover no-repeat;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding:20px;
 }
 
-header h1{
-font-size:48px;
-font-weight:900;
+.heroBox{
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(8px);
+padding:40px;
+border-radius:12px;
+max-width:700px;
+}
+
+.heroBox h1{
 color:black;
-max-width:100%;
-padding:0 10px;
+font-size:42px;
+font-weight:900;
+}
+
+.heroBox p{
+color:black;
+font-size:22px;
+margin-top:10px;
 }
 
 /* BUTTON */
@@ -121,48 +117,66 @@ padding:0 10px;
 background:#2e7d32;
 color:white;
 padding:12px 25px;
-border:none;
 border-radius:6px;
-font-weight:bold;
-cursor:pointer;
+text-decoration:none;
+display:inline-block;
 margin-top:20px;
+border:none;
+cursor:pointer;
 }
 
 /* SECTIONS */
 
 section{
-padding:60px 15px;
 max-width:1100px;
 margin:auto;
-width:100%;
+padding:50px 20px;
 }
 
 h2{
 text-align:center;
-margin-bottom:25px;
+margin-bottom:30px;
 }
 
-/* BACKGROUND SECTIONS */
-
-#services{
-background:url("https://images.unsplash.com/photo-1599423300746-b62533397364") center/cover fixed;
-}
-
-#washing{
-background:url("https://images.unsplash.com/photo-1562077981-4d5dfd3d33c4") center/cover fixed;
-}
-
-/* SERVICE */
+/* SERVICES */
 
 .service{
-background:rgba(0,0,0,.75);
-padding:16px;
+background:#1f7a48;
+padding:18px;
 border-radius:8px;
 margin-bottom:12px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:10px;
+}
+
+/* BACKGROUND SECTIONS */
+
+.bgService{
+background:url("https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62") center/cover fixed;
+}
+
+.bgWash{
+background:url("https://images.unsplash.com/photo-1581579186989-1c81b92b7013") center/cover fixed;
+}
+
+/* FORMS */
+
+form input,form textarea,form select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+border-radius:5px;
+}
+
+/* REVIEWS */
+
+.reviewBox{
+background:#145a3a;
+padding:20px;
+border-radius:8px;
+margin-bottom:15px;
 }
 
 /* CALL BUTTON */
@@ -171,77 +185,21 @@ gap:10px;
 position:fixed;
 bottom:20px;
 right:20px;
-background:#2e7d32;
-color:white;
-padding:12px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-z-index:3000;
-}
-
-/* POPUP */
-
-#estimatePopup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.7);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:5000;
-padding:15px;
-}
-
-#estimateBox{
-background:white;
+background:#ffd600;
 color:black;
-padding:25px;
-border-radius:10px;
-width:100%;
-max-width:380px;
-}
-
-#closeEstimate{
-float:right;
-cursor:pointer;
-font-size:20px;
-}
-
-/* REVIEWS */
-
-.reviewBox{
-background:#145a3a;
-padding:18px;
-border-radius:8px;
-margin-bottom:12px;
+padding:15px;
+border-radius:50px;
+font-weight:bold;
+z-index:5000;
+text-decoration:none;
 }
 
 /* FOOTER */
 
 footer{
-background:#0a291f;
+background:#081f17;
 text-align:center;
-padding:25px 15px;
-}
-
-/* ANIMATION */
-
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-.logo-main{font-size:26px;}
-header h1{font-size:38px;}
-
+padding:30px;
 }
 
 </style>
@@ -250,128 +208,94 @@ header h1{font-size:38px;}
 <body>
 
 <!-- LOGO -->
-
 <div id="logo">
-<div class="logo-main">🌿 IzzyScape Professionals</div>
-<div class="logo-tagline">Turning Yards Into Masterpieces</div>
+<span class="logo-main">🌿 IzzyScape Professionals</span>
+<span class="logo-tag">Turning Yards Into Masterpieces</span>
 </div>
 
 <!-- MENU -->
-
-<button id="menuBtn" onclick="toggleMenu()">☰</button>
+<button id="menuBtn">☰</button>
 
 <div id="sideMenu">
-
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#services" onclick="closeMenu()">Services</a>
-<a href="#washing" onclick="closeMenu()">Pressure Wash</a>
-<a href="#plans" onclick="closeMenu()">Plans</a>
-<a href="#booking" onclick="closeMenu()">Booking</a>
-<a href="#reviews" onclick="closeMenu()">Reviews</a>
-<a href="#map" onclick="closeMenu()">Location</a>
-<a href="#contact" onclick="closeMenu()">Contact</a>
-
+<a href="#services">Services</a>
+<a href="#wash">Pressure Wash</a>
+<a href="#book">Book</a>
+<a href="#reviews">Reviews</a>
+<a href="#map">Service Area</a>
 </div>
 
-<!-- HEADER -->
-
-<header id="home">
-
+<!-- HERO -->
+<header>
+<div class="heroBox">
 <h1>Bay Area Landscaping Experts</h1>
-
-<button class="btn" onclick="openEstimate()">Get Free Estimate</button>
-
+<p>Professional • Affordable • Reliable</p>
+<a href="#book" class="btn">Get Free Estimate</a>
+</div>
 </header>
 
 <!-- SERVICES -->
+<section id="services" class="bgService">
 
-<section id="services">
+<h2>Our Services</h2>
 
-<h2>Landscaping Services</h2>
-
-<div class="service">Lawn Mowing – $60 <button>Add</button></div>
-<div class="service">Weed Removal – $75 <button>Add</button></div>
-<div class="service">Bush Trimming – $80 <button>Add</button></div>
-<div class="service">Tree Trimming – $150 <button>Add</button></div>
-<div class="service">Mulching – $120 <button>Add</button></div>
-<div class="service">Sod Install – $3/sqft <button>Add</button></div>
-<div class="service">Irrigation Repair – $90 <button>Add</button></div>
-<div class="service">Cleanup – $150 <button>Add</button></div>
-<div class="service">Flower Beds – $100 <button>Add</button></div>
-<div class="service">Rock Install – $200 <button>Add</button></div>
+<div class="service"><span>Lawn Mowing – $60+</span><button>Add</button></div>
+<div class="service"><span>Weed Removal – $75+</span><button>Add</button></div>
+<div class="service"><span>Hedge Trimming – $80+</span><button>Add</button></div>
+<div class="service"><span>Tree Trimming – $150+</span><button>Add</button></div>
+<div class="service"><span>Mulching – $120+</span><button>Add</button></div>
+<div class="service"><span>Yard Cleanup – $150+</span><button>Add</button></div>
 
 </section>
 
-<!-- WASHING -->
-
-<section id="washing">
+<!-- WASH -->
+<section id="wash" class="bgWash">
 
 <h2>Pressure Washing</h2>
 
-<div class="service">Driveway – $40 <button>Add</button></div>
-<div class="service">Patio – $30 <button>Add</button></div>
-<div class="service">House – $200 <button>Add</button></div>
-<div class="service">Garage – $80 <button>Add</button></div>
+<div class="service"><span>Driveway – $40</span><button>Add</button></div>
+<div class="service"><span>Patio – $30</span><button>Add</button></div>
+<div class="service"><span>House – $200</span><button>Add</button></div>
+<div class="service"><span>Garage – $80</span><button>Add</button></div>
 
 </section>
 
-<!-- PLANS -->
+<!-- BOOK -->
+<section id="book">
 
-<section id="plans">
+<h2>Book Appointment</h2>
 
-<h2>Maintenance & Specials</h2>
+<form onsubmit="sendText(event)">
 
-<div class="service">Monthly Plan – $250 <button>Add</button></div>
-<div class="service">Front+Back Special – $499 <button>Add</button></div>
+<input id="name" placeholder="Your Name" required>
+<input id="service" placeholder="Service Needed" required>
+<textarea id="details" placeholder="Details"></textarea>
 
-</section>
+<button class="btn">Book Now</button>
 
-<!-- WHY -->
-
-<section>
-
-<h2>Why Yard Care Matters</h2>
-
-<p>✔ Increases home value</p>
-<p>✔ Prevents weeds</p>
-<p>✔ Keeps property clean</p>
-<p>✔ Creates relaxation space</p>
-
-</section>
-
-<!-- BOOKING -->
-
-<section id="booking">
-
-<h2>Online Booking</h2>
-
-<input type="date"><br><br>
-
-<button class="btn">Book Appointment</button>
+</form>
 
 </section>
 
 <!-- REVIEWS -->
-
 <section id="reviews">
 
 <h2>Customer Reviews</h2>
 
 <form onsubmit="addReview(event)">
 
-<input id="rName" placeholder="Name" required><br><br>
+<input id="rname" placeholder="Your Name" required>
 
-<select id="rStars">
-<option>5 ⭐⭐⭐⭐⭐</option>
-<option>4 ⭐⭐⭐⭐</option>
-<option>3 ⭐⭐⭐</option>
-<option>2 ⭐⭐</option>
-<option>1 ⭐</option>
-</select><br><br>
+<select id="stars">
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
 
-<textarea id="rText" placeholder="Review"></textarea><br><br>
+<textarea id="rtext" placeholder="Your Review"></textarea>
 
-<button class="btn">Submit</button>
+<button class="btn">Submit Review</button>
 
 </form>
 
@@ -380,129 +304,103 @@ header h1{font-size:38px;}
 </section>
 
 <!-- MAP -->
-
 <section id="map">
 
 <h2>Serving All Bay Area</h2>
 
-<iframe
-width="100%"
-height="300"
-style="border:0"
-loading="lazy"
-src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&z=10&output=embed">
-</iframe>
+<iframe width="100%" height="300" src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&t=&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </section>
 
-<!-- CONTACT -->
+<!-- CALL -->
+<a id="callBtn" href="tel:+15105717801">📞 Call Now</a>
 
-<section id="contact">
+<!-- FOOTER -->
+<footer>
 
-<h2>Contact & Payment</h2>
+<p>Call or Text: <strong>(510) 571-7801</strong></p>
 
-<p>📞 (510) 571-7801</p>
-
-<p>
-<a href="mailto:Izzyscapelandscapingpros@gmail.com" style="color:yellow">
+<p>Email:
+<a href="mailto:Izzyscapelandscapingpros@gmail.com" style="color:#ffd600;">
 Izzyscapelandscapingpros@gmail.com
 </a>
 </p>
-
-<button class="btn">Pay with PayPal</button>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>For assistance call or text:</p>
-<strong>(510) 571-7801</strong>
 
 <p>© 2026 IzzyScape Professionals</p>
 
 </footer>
 
-<!-- CALL BUTTON -->
-
-<a id="callBtn" href="tel:15105717801">📞 Call Now</a>
-
-<!-- POPUP -->
-
-<div id="estimatePopup">
-
-<div id="estimateBox">
-
-<span id="closeEstimate" onclick="closeEstimate()">✖</span>
-
-<h3>Free Estimate</h3>
-
-<form action="https://formsubmit.co/Izzyscapelandscapingpros@gmail.com" method="POST">
-
-<input name="name" placeholder="Name" required><br><br>
-
-<input name="phone" placeholder="Phone" required><br><br>
-
-<input name="address" placeholder="Address" required><br><br>
-
-<textarea name="details"></textarea><br><br>
-
-<button class="btn">Send</button>
-
-</form>
-
-</div>
-
-</div>
-
-<!-- SCRIPT -->
-
 <script>
 
-function toggleMenu(){
-let m=document.getElementById("sideMenu");
-m.style.right=(m.style.right=="0px")?"-260px":"0px";
+/* MENU */
+
+const btn=document.getElementById("menuBtn");
+const menu=document.getElementById("sideMenu");
+
+btn.onclick=()=>{
+menu.style.right=menu.style.right=="0px"?"-260px":"0px";
 }
 
-function closeMenu(){
-document.getElementById("sideMenu").style.right="-260px";
-}
+/* TEXT FORMS */
 
-document.addEventListener("click",function(e){
-if(!e.target.closest("#sideMenu") && !e.target.closest("#menuBtn")){
-closeMenu();
-}
-});
+const PHONE="15105717801";
 
-function openEstimate(){
-document.getElementById("estimatePopup").style.display="flex";
-}
-
-function closeEstimate(){
-document.getElementById("estimatePopup").style.display="none";
-}
-
-setTimeout(openEstimate,12000);
-
-function addReview(e){
-
+function sendText(e){
 e.preventDefault();
 
-let name=rName.value;
-let stars=rStars.value;
-let text=rText.value;
+let name=document.getElementById("name").value;
+let serv=document.getElementById("service").value;
+let det=document.getElementById("details").value;
 
-let box=document.createElement("div");
-box.className="reviewBox";
+let msg=`Booking Request:
+Name: ${name}
+Service: ${serv}
+Details: ${det}`;
 
-box.innerHTML="<strong>"+name+"</strong><br>"+stars+"<br>"+text;
+window.location.href=`sms:${PHONE}?body=${encodeURIComponent(msg)}`;
+}
 
-reviewList.prepend(box);
+/* REVIEWS */
+
+function addReview(e){
+e.preventDefault();
+
+let name=rname.value;
+let stars=document.getElementById("stars").value;
+let text=rtext.value;
+
+let data=JSON.parse(localStorage.getItem("reviews")||"[]");
+
+data.push({name,stars,text});
+
+localStorage.setItem("reviews",JSON.stringify(data));
+
+showReviews();
 
 e.target.reset();
+}
+
+function showReviews(){
+
+let list=document.getElementById("reviewList");
+list.innerHTML="";
+
+let data=JSON.parse(localStorage.getItem("reviews")||"[]");
+
+data.forEach(r=>{
+
+let div=document.createElement("div");
+div.className="reviewBox";
+
+div.innerHTML=`<strong>${r.name}</strong><br>${r.stars}<br>${r.text}`;
+
+list.appendChild(div);
+
+});
 
 }
+
+showReviews();
 
 </script>
 

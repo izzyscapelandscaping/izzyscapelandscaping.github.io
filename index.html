@@ -24,10 +24,10 @@ top:20px;
 right:20px;
 background:transparent;
 border:none;
-font-size:30px;
+font-size:32px;
 color:white;
 cursor:pointer;
-z-index:1001;
+z-index:3000;
 }
 
 /* SIDE MENU */
@@ -36,32 +36,34 @@ z-index:1001;
 position:fixed;
 top:0;
 right:-300px;
-width:300px;
+width:280px;
 height:100%;
-background:rgba(255,255,255,0.9);
+background:rgba(255,255,255,0.95);
 color:black;
-padding:30px;
+padding:30px 20px;
 transition:0.4s;
-z-index:1000;
+z-index:2500;
+box-shadow:-3px 0 8px rgba(0,0,0,0.3);
 }
 
 #sideMenu a{
 display:block;
-padding:15px;
+padding:14px;
 text-decoration:none;
 color:black;
 font-weight:bold;
+border-radius:5px;
 }
 
 #sideMenu a:hover{
-background:#ddd;
+background:#eee;
 }
 
 /* HERO */
 
 header{
 background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-padding:160px 20px;
+padding:170px 20px;
 text-align:center;
 }
 
@@ -75,10 +77,11 @@ color:black;
 background:black;
 color:white;
 display:inline-block;
-padding:15px 30px;
+padding:15px 35px;
 font-size:24px;
 font-weight:900;
 margin-top:15px;
+border-radius:6px;
 }
 
 /* BUTTON */
@@ -91,6 +94,11 @@ border:none;
 border-radius:6px;
 font-weight:bold;
 cursor:pointer;
+font-size:16px;
+}
+
+.btn:hover{
+background:#256528;
 }
 
 /* SECTIONS */
@@ -101,7 +109,10 @@ max-width:1100px;
 margin:auto;
 }
 
-h2{text-align:center}
+h2{
+text-align:center;
+margin-bottom:30px;
+}
 
 /* SERVICES */
 
@@ -110,21 +121,19 @@ background:url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?aut
 border-radius:12px;
 }
 
+#washing{
+background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
+border-radius:12px;
+}
+
 .service{
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.75);
 padding:20px;
 border-radius:10px;
 margin-bottom:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-}
-
-/* PRESSURE */
-
-#washing{
-background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
-border-radius:12px;
 }
 
 /* FORM */
@@ -135,9 +144,10 @@ padding:12px;
 margin:8px 0;
 border-radius:5px;
 border:none;
+font-size:15px;
 }
 
-/* REVIEWS */
+/* REVIEW BOX */
 
 .reviewBox{
 background:#145a3a;
@@ -152,6 +162,7 @@ iframe{
 width:100%;
 height:300px;
 border:0;
+border-radius:10px;
 }
 
 /* FOOTER */
@@ -162,26 +173,74 @@ padding:30px;
 text-align:center;
 }
 
+/* CALL BUTTON */
+
+#callBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#2e7d32;
+color:white;
+padding:12px 20px;
+border-radius:30px;
+font-weight:bold;
+text-decoration:none;
+z-index:2000;
+}
+
+/* ESTIMATE POPUP */
+
+#estimatePopup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:4000;
+}
+
+#estimateBox{
+background:white;
+color:black;
+padding:25px;
+border-radius:10px;
+width:90%;
+max-width:400px;
+position:relative;
+}
+
+#closeEstimate{
+position:absolute;
+top:10px;
+right:15px;
+cursor:pointer;
+font-size:20px;
+font-weight:bold;
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- MENU BUTTON -->
-<button id="menuBtn" onclick="toggleMenu()">☰</button>
+<!-- MENU -->
 
-<!-- SIDE MENU -->
+<button id="menuBtn" onclick="toggleMenu()">☰</button>
 
 <div id="sideMenu">
 
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#washing">Pressure Wash</a>
-<a href="#special">Special</a>
-<a href="#booking">Booking</a>
-<a href="#reviews">Reviews</a>
-<a href="#map">Location</a>
-<a href="#contact">Contact</a>
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#services" onclick="closeMenu()">Services</a>
+<a href="#washing" onclick="closeMenu()">Pressure Wash</a>
+<a href="#special" onclick="closeMenu()">Special</a>
+<a href="#booking" onclick="closeMenu()">Booking</a>
+<a href="#reviews" onclick="closeMenu()">Reviews</a>
+<a href="#map" onclick="closeMenu()">Service Area</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
 
 </div>
 
@@ -195,7 +254,7 @@ text-align:center;
 
 <br><br>
 
-<a href="#booking" class="btn">Book Now</a>
+<button class="btn" onclick="openEstimate()">Get Free Estimate</button>
 
 </header>
 
@@ -263,17 +322,17 @@ text-align:center;
 
 <div class="reviewBox">
 
-✔ Increases home value  
-<br>✔ Prevents weeds  
+✔ Raises home value  
+<br>✔ Stops weeds & pests  
 <br>✔ Improves curb appeal  
-<br>✔ Keeps property healthy  
-<br>✔ Makes home stand out
+<br>✔ Keeps lawn healthy  
+<br>✔ Makes home stand out  
 
 </div>
 
 </section>
 
-<!-- BOOKING + PAY -->
+<!-- BOOKING -->
 
 <section id="booking">
 
@@ -318,9 +377,13 @@ text-align:center;
 <h2>Customer Reviews</h2>
 
 <input id="rName" placeholder="Name">
+
 <select id="rStars">
-<option>⭐</option><option>⭐⭐</option><option>⭐⭐⭐</option>
-<option>⭐⭐⭐⭐</option><option>⭐⭐⭐⭐⭐</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
 </select>
 
 <textarea id="rText" placeholder="Review"></textarea>
@@ -335,13 +398,13 @@ text-align:center;
 
 <section id="map">
 
-<h2>Service Area</h2>
+<h2>Service Area – Bay Area</h2>
 
 <iframe src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area%20California&t=&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </section>
 
-<!-- CONTACT -->
+<!-- FOOTER -->
 
 <footer id="contact">
 
@@ -359,18 +422,78 @@ Izzyscapelandscapingpros@gmail.com
 
 </footer>
 
-<!-- SCRIPT -->
+<!-- CALL -->
+
+<a id="callBtn" href="tel:15105717801">📞 Call Now</a>
+
+<!-- ESTIMATE POPUP -->
+
+<div id="estimatePopup">
+
+<div id="estimateBox">
+
+<span id="closeEstimate" onclick="closeEstimate()">✖</span>
+
+<h3>Get Free Estimate</h3>
+
+<form action="https://formsubmit.co/Izzyscapelandscapingpros@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input name="name" placeholder="Name" required>
+<input name="phone" placeholder="Phone" required>
+<input name="address" placeholder="Address" required>
+
+<select name="service" required>
+<option>Lawn Care</option>
+<option>Cleanup</option>
+<option>Tree Trimming</option>
+<option>Pressure Washing</option>
+<option>Maintenance</option>
+<option>Other</option>
+</select>
+
+<textarea name="details" placeholder="Details"></textarea>
+
+<button class="btn" style="width:100%">Submit</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- SCRIPTS -->
 
 <script>
 
 /* MENU */
 
 function toggleMenu(){
+
 let menu=document.getElementById("sideMenu");
 
 menu.style.right =
 menu.style.right=="0px" ? "-300px" : "0px";
+
 }
+
+function closeMenu(){
+document.getElementById("sideMenu").style.right="-300px";
+}
+
+/* CLOSE ON OUTSIDE CLICK */
+
+document.addEventListener("click",function(e){
+
+let menu=document.getElementById("sideMenu");
+let btn=document.getElementById("menuBtn");
+
+if(!menu.contains(e.target) && !btn.contains(e.target)){
+menu.style.right="-300px";
+}
+
+});
 
 /* PRICE */
 
@@ -400,7 +523,17 @@ rText.value="";
 
 }
 
-/* PAYPAL */
+/* ESTIMATE */
+
+function openEstimate(){
+document.getElementById("estimatePopup").style.display="flex";
+}
+
+function closeEstimate(){
+document.getElementById("estimatePopup").style.display="none";
+}
+
+setTimeout(openEstimate,10000);
 
 </script>
 
@@ -415,9 +548,7 @@ createOrder:function(data,actions){
 let total=document.getElementById("total").innerText;
 
 return actions.order.create({
-
 purchase_units:[{amount:{value:total}}]
-
 });
 
 },
@@ -425,9 +556,7 @@ purchase_units:[{amount:{value:total}}]
 onApprove:function(data,actions){
 
 return actions.order.capture().then(function(){
-
 alert("Payment Successful!");
-
 });
 
 }
@@ -437,4 +566,4 @@ alert("Payment Successful!");
 </script>
 
 </body>
-</html>
+  </html>

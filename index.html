@@ -9,15 +9,11 @@
 
 <style>
 
-/* RESET */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
-
-/* BODY */
 
 body{
 font-family:Montserrat,Arial,sans-serif;
@@ -63,7 +59,7 @@ cursor:pointer;
 z-index:6000;
 }
 
-/* MENU OVERLAY */
+/* FULL OVERLAY MENU */
 
 #menuOverlay{
 position:fixed;
@@ -96,9 +92,9 @@ font-weight:800;
 
 header{
 min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-url("https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1800&q=80")
+
+/* 🌿 NEW CLEAN LANDSCAPING HERO IMAGE */
+background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80")
 center/cover no-repeat;
 
 display:flex;
@@ -107,31 +103,24 @@ justify-content:center;
 text-align:center;
 }
 
-/* HERO BOX */
-
 .heroBox{
-background:rgba(255,255,255,0.2);
+background:rgba(255,255,255,0.25);
 backdrop-filter:blur(10px);
 padding:40px;
 border-radius:12px;
 max-width:700px;
 }
 
-/* HERO TEXT */
-
 .heroBox h1{
 color:black;
-font-size:46px;
+font-size:42px;
 font-weight:900;
-letter-spacing:1px;
-text-shadow:3px 3px 10px rgba(0,0,0,0.7);
 }
 
 .heroBox p{
 color:black;
 font-size:22px;
-margin-top:12px;
-text-shadow:2px 2px 6px rgba(0,0,0,0.6);
+margin-top:10px;
 }
 
 /* BUTTON */
@@ -161,7 +150,7 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* SERVICE BOX */
+/* SERVICES */
 
 .service{
 background:rgba(31,122,72,0.9);
@@ -191,9 +180,7 @@ center/cover fixed;
 
 /* FORMS */
 
-form input,
-form textarea,
-form select{
+form input,form textarea,form select{
 width:100%;
 padding:10px;
 margin:8px 0;
@@ -247,7 +234,7 @@ padding:30px;
 <!-- MENU BUTTON -->
 <button id="menuBtn">☰</button>
 
-<!-- MENU OVERLAY -->
+<!-- FULL MENU OVERLAY -->
 <div id="menuOverlay" onclick="closeMenu()">
 
 <div id="menuContent" onclick="event.stopPropagation()">
@@ -284,7 +271,7 @@ padding:30px;
 
 </section>
 
-<!-- PRESSURE WASH -->
+<!-- WASH -->
 <section id="wash" class="bgWash">
 
 <h2>Pressure Washing</h2>
@@ -296,7 +283,7 @@ padding:30px;
 
 </section>
 
-<!-- BOOKING -->
+<!-- BOOK -->
 <section id="book">
 
 <h2>Book Appointment</h2>
@@ -371,28 +358,34 @@ Izzyscapelandscapingpros@gmail.com
 
 <script>
 
-/* MENU */
+/* MENU OVERLAY */
 
 const btn=document.getElementById("menuBtn");
 const menu=document.getElementById("menuOverlay");
 
-btn.onclick=()=>{ menu.style.right="0"; };
+btn.onclick=()=>{
+menu.style.right="0";
+};
 
 function closeMenu(){
 menu.style.right="-100%";
 }
 
-/* SMS */
+/* TEXT FORMS */
 
 const PHONE="15105717801";
 
 function sendText(e){
 e.preventDefault();
 
+let name=document.getElementById("name").value;
+let serv=document.getElementById("service").value;
+let det=document.getElementById("details").value;
+
 let msg=`Booking Request:
-Name: ${name.value}
-Service: ${service.value}
-Details: ${details.value}`;
+Name: ${name}
+Service: ${serv}
+Details: ${det}`;
 
 window.location.href=`sms:${PHONE}?body=${encodeURIComponent(msg)}`;
 }
@@ -402,17 +395,18 @@ window.location.href=`sms:${PHONE}?body=${encodeURIComponent(msg)}`;
 function addReview(e){
 e.preventDefault();
 
+let name=rname.value;
+let stars=document.getElementById("stars").value;
+let text=rtext.value;
+
 let data=JSON.parse(localStorage.getItem("reviews")||"[]");
 
-data.push({
-name:rname.value,
-stars:stars.value,
-text:rtext.value
-});
+data.push({name,stars,text});
 
 localStorage.setItem("reviews",JSON.stringify(data));
 
 showReviews();
+
 e.target.reset();
 }
 
@@ -433,6 +427,7 @@ div.innerHTML=`<strong>${r.name}</strong><br>${r.stars}<br>${r.text}`;
 list.appendChild(div);
 
 });
+
 }
 
 showReviews();

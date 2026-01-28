@@ -6,28 +6,58 @@
 
 <title>IzzyScape Professionals</title>
 
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:'Poppins',Arial,sans-serif;
 background:#0e3b2c;
 color:white;
 scroll-behavior:smooth;
+}
+
+/* LOGO */
+
+#logo{
+position:fixed;
+top:15px;
+left:20px;
+font-size:24px;
+font-weight:900;
+color:white;
+z-index:4000;
+display:flex;
+align-items:center;
+gap:6px;
+text-shadow:1px 1px 4px rgba(0,0,0,0.6);
+animation:logoFade 2s ease-in-out;
+}
+
+@keyframes logoFade{
+from{opacity:0;transform:translateY(-10px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+#logo span{
+color:#7CFC90;
+font-size:26px;
 }
 
 /* MENU BUTTON */
 
 #menuBtn{
 position:fixed;
-top:20px;
+top:15px;
 right:20px;
 background:transparent;
 border:none;
 font-size:32px;
 color:white;
 cursor:pointer;
-z-index:3000;
+z-index:4000;
 }
 
 /* SIDE MENU */
@@ -39,11 +69,10 @@ right:-300px;
 width:280px;
 height:100%;
 background:rgba(255,255,255,0.95);
-color:black;
 padding:30px 20px;
 transition:0.4s;
-z-index:2500;
-box-shadow:-3px 0 8px rgba(0,0,0,0.3);
+z-index:3500;
+box-shadow:-3px 0 10px rgba(0,0,0,0.3);
 }
 
 #sideMenu a{
@@ -51,7 +80,7 @@ display:block;
 padding:14px;
 text-decoration:none;
 color:black;
-font-weight:bold;
+font-weight:700;
 border-radius:5px;
 }
 
@@ -63,18 +92,11 @@ background:#eee;
 
 header{
 background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-padding:170px 20px;
+padding:180px 20px;
 text-align:center;
 }
 
-header h1{
-font-size:48px;
-font-weight:900;
-color:black;
-max-width:100%;
-word-wrap:break-word;
-padding:0 10px;
-}
+header h1{display:none;}
 
 #tagline{
 background:rgba(0,0,0,0.6);
@@ -93,10 +115,10 @@ backdrop-filter:blur(2px);
 .btn{
 background:#2e7d32;
 color:white;
-padding:15px 30px;
+padding:14px 28px;
 border:none;
 border-radius:6px;
-font-weight:bold;
+font-weight:700;
 cursor:pointer;
 font-size:16px;
 }
@@ -132,7 +154,7 @@ border-radius:12px;
 
 .service{
 background:rgba(0,0,0,0.75);
-padding:20px;
+padding:18px;
 border-radius:10px;
 margin-bottom:15px;
 display:flex;
@@ -151,7 +173,7 @@ border:none;
 font-size:15px;
 }
 
-/* REVIEW BOX */
+/* REVIEWS */
 
 .reviewBox{
 background:#145a3a;
@@ -187,9 +209,9 @@ background:#2e7d32;
 color:white;
 padding:12px 20px;
 border-radius:30px;
-font-weight:bold;
+font-weight:700;
 text-decoration:none;
-z-index:2000;
+z-index:3000;
 }
 
 /* ESTIMATE POPUP */
@@ -204,7 +226,7 @@ background:rgba(0,0,0,0.7);
 display:none;
 justify-content:center;
 align-items:center;
-z-index:4000;
+z-index:5000;
 }
 
 #estimateBox{
@@ -223,7 +245,7 @@ top:10px;
 right:15px;
 cursor:pointer;
 font-size:20px;
-font-weight:bold;
+font-weight:900;
 }
 
 </style>
@@ -231,8 +253,12 @@ font-weight:bold;
 
 <body>
 
-<!-- MENU -->
+<!-- LOGO -->
+<div id="logo">
+<span>🌿</span> IzzyScape Professionals
+</div>
 
+<!-- MENU -->
 <button id="menuBtn" onclick="toggleMenu()">☰</button>
 
 <div id="sideMenu">
@@ -251,8 +277,6 @@ font-weight:bold;
 <!-- HERO -->
 
 <header id="home">
-
-<h1>IzzyScape Professionals</h1>
 
 <div id="tagline">Turning Yards Into Masterpieces</div>
 
@@ -383,11 +407,8 @@ font-weight:bold;
 <input id="rName" placeholder="Name">
 
 <select id="rStars">
-<option>⭐</option>
-<option>⭐⭐</option>
-<option>⭐⭐⭐</option>
-<option>⭐⭐⭐⭐</option>
-<option>⭐⭐⭐⭐⭐</option>
+<option>⭐</option><option>⭐⭐</option><option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option><option>⭐⭐⭐⭐⭐</option>
 </select>
 
 <textarea id="rText" placeholder="Review"></textarea>
@@ -426,7 +447,7 @@ Izzyscapelandscapingpros@gmail.com
 
 </footer>
 
-<!-- CALL -->
+<!-- CALL BUTTON -->
 
 <a id="callBtn" href="tel:15105717801">📞 Call Now</a>
 
@@ -486,7 +507,7 @@ function closeMenu(){
 document.getElementById("sideMenu").style.right="-300px";
 }
 
-/* CLOSE ON OUTSIDE CLICK */
+/* CLOSE WHEN CLICK OUTSIDE */
 
 document.addEventListener("click",function(e){
 
@@ -541,6 +562,8 @@ setTimeout(openEstimate,10000);
 
 </script>
 
+<!-- PAYPAL -->
+
 <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 
 <script>
@@ -570,4 +593,4 @@ alert("Payment Successful!");
 </script>
 
 </body>
-  </html>
+</html>

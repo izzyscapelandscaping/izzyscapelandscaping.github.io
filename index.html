@@ -2,128 +2,164 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>IzzyScape Professionals</title>
 
 <style>
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0e3b2c;
-    color: white;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0e3b2c;
+color:white;
+scroll-behavior:smooth;
 }
 
-/* CART SYSTEM */
+/* MENU BUTTON */
 
-.cart-box {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: #ffd600;
-    color: black;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-weight: bold;
-    z-index: 1000;
+#menuBtn{
+position:fixed;
+top:20px;
+right:20px;
+background:transparent;
+border:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+z-index:1001;
 }
 
-/* HEADER */
+/* SIDE MENU */
 
-header {
-    background: url("https://images.unsplash.com/photo-1599685315644-23cc2e2dfd3d?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-    padding: 130px 20px;
-    text-align: center;
+#sideMenu{
+position:fixed;
+top:0;
+right:-300px;
+width:300px;
+height:100%;
+background:rgba(255,255,255,0.9);
+color:black;
+padding:30px;
+transition:0.4s;
+z-index:1000;
 }
 
-header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: black;
+#sideMenu a{
+display:block;
+padding:15px;
+text-decoration:none;
+color:black;
+font-weight:bold;
 }
 
-header p {
-    font-size: 22px;
-    color: black;
+#sideMenu a:hover{
+background:#ddd;
+}
+
+/* HERO */
+
+header{
+background:url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+padding:160px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:55px;
+font-weight:900;
+color:black;
+}
+
+#tagline{
+background:black;
+color:white;
+display:inline-block;
+padding:15px 30px;
+font-size:24px;
+font-weight:900;
+margin-top:15px;
 }
 
 /* BUTTON */
 
-.btn {
-    background: #2e7d32;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
+.btn{
+background:#2e7d32;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
 }
 
 /* SECTIONS */
 
-section {
-    padding: 40px 20px;
-    max-width: 1100px;
-    margin: auto;
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
+h2{text-align:center}
+
+/* SERVICES */
+
+#services{
+background:url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
+border-radius:12px;
 }
 
-/* SERVICE BOX */
-
-.service {
-    background: #1f7a48;
-    padding: 18px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.service{
+background:rgba(0,0,0,0.7);
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.service button {
-    background: #ffd600;
-    border: none;
-    padding: 8px 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+/* PRESSURE */
+
+#washing{
+background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80") center/cover fixed no-repeat;
+border-radius:12px;
 }
 
-/* WHY + REVIEWS */
+/* FORM */
 
-.why {
-    background: #145a3a;
-    border-radius: 10px;
-    padding: 25px;
-    line-height: 1.7;
+input,select,textarea{
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:5px;
+border:none;
 }
 
-/* CONTACT FORM */
+/* REVIEWS */
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: none;
+.reviewBox{
+background:#145a3a;
+padding:20px;
+border-radius:10px;
+margin:10px 0;
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:300px;
+border:0;
 }
 
 /* FOOTER */
 
-footer {
-    background: #0a291f;
-    text-align: center;
-    padding: 30px;
-}
-
-footer strong {
-    font-size: 20px;
+footer{
+background:#0a291f;
+padding:30px;
+text-align:center;
 }
 
 </style>
@@ -131,141 +167,80 @@ footer strong {
 
 <body>
 
+<!-- MENU BUTTON -->
+<button id="menuBtn" onclick="toggleMenu()">☰</button>
 
-<!-- CART DISPLAY -->
+<!-- SIDE MENU -->
 
-<div class="cart-box" id="cartBox">
-Cart: 0
+<div id="sideMenu">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#washing">Pressure Wash</a>
+<a href="#special">Special</a>
+<a href="#booking">Booking</a>
+<a href="#reviews">Reviews</a>
+<a href="#map">Location</a>
+<a href="#contact">Contact</a>
+
 </div>
 
+<!-- HERO -->
 
-<script>
-
-let cart = [];
-
-function addToCart(item) {
-    cart.push(item);
-    document.getElementById("cartBox").innerText = "Cart: " + cart.length;
-    alert(item + " added!");
-}
-
-</script>
-
-
-<!-- HEADER -->
-
-<header>
+<header id="home">
 
 <h1>IzzyScape Professionals</h1>
 
-<p>Turning Yards Into Masterpieces</p>
+<div id="tagline">Turning Yards Into Masterpieces</div>
 
-<a class="btn" href="#contact">Get a Free Quote</a>
+<br><br>
+
+<a href="#booking" class="btn">Book Now</a>
 
 </header>
-
 
 <!-- SERVICES -->
 
 <section id="services">
 
-<h2>Our Services</h2>
+<h2>Landscaping Services</h2>
 
-<div class="service">
-<span>Lawn Mowing & Edging – $60+</span>
-<button onclick="addToCart('Lawn Mowing $60+')">Add</button>
-</div>
-
-<div class="service">
-<span>Weed Removal – $75+</span>
-<button onclick="addToCart('Weed Removal $75+')">Add</button>
-</div>
-
-<div class="service">
-<span>Bush & Hedge Trimming – $80+</span>
-<button onclick="addToCart('Bush Trimming $80+')">Add</button>
-</div>
-
-<div class="service">
-<span>Tree Trimming – $150+</span>
-<button onclick="addToCart('Tree Trimming $150+')">Add</button>
-</div>
-
-<div class="service">
-<span>Mulching – $120+</span>
-<button onclick="addToCart('Mulching $120+')">Add</button>
-</div>
-
-<div class="service">
-<span>Sod Installation – $3 / sq ft</span>
-<button onclick="addToCart('Sod $3/sqft')">Add</button>
-</div>
-
-<div class="service">
-<span>Irrigation Repair – $90+</span>
-<button onclick="addToCart('Irrigation $90+')">Add</button>
-</div>
-
-<div class="service">
-<span>Yard Cleanup – $150+</span>
-<button onclick="addToCart('Cleanup $150+')">Add</button>
-</div>
-
-<div class="service">
-<span>Flower Bed Design – $100+</span>
-<button onclick="addToCart('Flower Bed $100+')">Add</button>
-</div>
-
-<div class="service">
-<span>Rock & Gravel Install – $200+</span>
-<button onclick="addToCart('Rock Install $200+')">Add</button>
-</div>
+<div class="service"><span>Lawn Mowing – $60+</span><button>Add</button></div>
+<div class="service"><span>Weed Removal – $75+</span><button>Add</button></div>
+<div class="service"><span>Hedge Trimming – $80+</span><button>Add</button></div>
+<div class="service"><span>Tree Trimming – $150+</span><button>Add</button></div>
+<div class="service"><span>Mulching – $120+</span><button>Add</button></div>
+<div class="service"><span>Sod Install – $3/sqft</span><button>Add</button></div>
+<div class="service"><span>Cleanup – $150+</span><button>Add</button></div>
+<div class="service"><span>Rock Install – $200+</span><button>Add</button></div>
 
 </section>
 
+<!-- PRESSURE -->
 
-<!-- PRESSURE WASHING -->
-
-<section>
+<section id="washing">
 
 <h2>Pressure Washing</h2>
 
-<div class="service">
-<span>Driveway – $40</span>
-<button onclick="addToCart('Driveway $40')">Add</button>
-</div>
-
-<div class="service">
-<span>Patio – $30</span>
-<button onclick="addToCart('Patio $30')">Add</button>
-</div>
-
-<div class="service">
-<span>Whole House – $200</span>
-<button onclick="addToCart('Whole House $200')">Add</button>
-</div>
-
-<div class="service">
-<span>Garage / Shed – $80</span>
-<button onclick="addToCart('Garage $80')">Add</button>
-</div>
+<div class="service"><span>Driveway – $40</span><button>Add</button></div>
+<div class="service"><span>Patio – $30</span><button>Add</button></div>
+<div class="service"><span>House – $200</span><button>Add</button></div>
+<div class="service"><span>Garage – $80</span><button>Add</button></div>
 
 </section>
 
-
 <!-- SPECIAL -->
 
-<section>
+<section id="special">
 
 <h2>Special Offer</h2>
 
 <div class="service">
-<span>Front + Back Yard Special – $499</span>
-<button onclick="addToCart('Special $499')">Add</button>
+<span>Front + Back Yard – $499</span>
+<button>Add</button>
 </div>
 
 </section>
-
 
 <!-- MAINTENANCE -->
 
@@ -274,87 +249,108 @@ function addToCart(item) {
 <h2>Maintenance Plan</h2>
 
 <div class="service">
-<span>Monthly Visit Plan – $250 / Month</span>
-<button onclick="addToCart('Monthly $250')">Add</button>
+<span>$250 / Month (1 Visit)</span>
+<button>Add</button>
 </div>
 
 </section>
 
-
-<!-- WHY CARE -->
+<!-- WHY -->
 
 <section>
 
-<h2>Why Yard Care Is Important</h2>
+<h2>Why Yard Care Matters</h2>
 
-<div class="why">
+<div class="reviewBox">
 
-<p>✔ Boosts property value</p>
-<p>✔ Keeps pests away</p>
-<p>✔ Improves curb appeal</p>
-<p>✔ Prevents lawn damage</p>
-<p>✔ Creates relaxing space</p>
-<p>✔ Saves money long-term</p>
-
-</div>
-
-</section>
-
-
-<!-- REVIEWS -->
-
-<section>
-
-<h2>Customer Reviews</h2>
-
-<div class="why">
-
-<p>⭐⭐⭐⭐⭐ “Excellent work every time!” – Maria G.</p>
-
-<p>⭐⭐⭐⭐⭐ “Fast, affordable, reliable.” – James L.</p>
-
-<p>⭐⭐⭐⭐⭐ “Best landscapers in town.” – Carlos R.</p>
+✔ Increases home value  
+<br>✔ Prevents weeds  
+<br>✔ Improves curb appeal  
+<br>✔ Keeps property healthy  
+<br>✔ Makes home stand out
 
 </div>
 
 </section>
 
+<!-- BOOKING + PAY -->
 
-<!-- CONTACT -->
+<section id="booking">
 
-<section id="contact">
-
-<h2>Request a Free Quote</h2>
+<h2>Book & Pay</h2>
 
 <form action="https://formsubmit.co/Izzyscapelandscapingpros@gmail.com" method="POST">
 
 <input type="hidden" name="_captcha" value="false">
 
-<input type="text" name="name" placeholder="Your Name" required>
+<input name="name" placeholder="Name" required>
+<input name="email" type="email" placeholder="Email" required>
+<input name="phone" placeholder="Phone" required>
+<input type="date" name="date" required>
 
-<input type="email" name="email" placeholder="Your Email" required>
+<select id="price">
+<option value="0">Select Service</option>
+<option value="60">Lawn $60</option>
+<option value="75">Weeds $75</option>
+<option value="150">Tree $150</option>
+<option value="250">Monthly $250</option>
+<option value="499">Special $499</option>
+</select>
 
-<input type="tel" name="phone" placeholder="Your Phone" required>
+<p>Total: $<span id="total">0</span></p>
 
-<textarea name="message" placeholder="What service do you need?" required></textarea>
+<textarea name="details" placeholder="Details"></textarea>
 
-<button type="submit" class="btn" style="width:100%;">Send Request</button>
+<button class="btn">Send Request</button>
 
 </form>
 
+<br>
+
+<div id="paypal-button-container"></div>
+
 </section>
 
+<!-- REVIEWS -->
 
-<!-- FOOTER -->
+<section id="reviews">
 
-<footer>
+<h2>Customer Reviews</h2>
 
-<p>Call or Text</p>
+<input id="rName" placeholder="Name">
+<select id="rStars">
+<option>⭐</option><option>⭐⭐</option><option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option><option>⭐⭐⭐⭐⭐</option>
+</select>
 
-<p><strong>(510) 571-7801</strong></p>
+<textarea id="rText" placeholder="Review"></textarea>
+
+<button class="btn" onclick="addReview()">Submit</button>
+
+<div id="reviewList"></div>
+
+</section>
+
+<!-- MAP -->
+
+<section id="map">
+
+<h2>Service Area</h2>
+
+<iframe src="https://maps.google.com/maps?q=Oakland%20CA&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+<!-- CONTACT -->
+
+<footer id="contact">
+
+<p>For further assistance call or text</p>
+
+<strong style="font-size:24px">(510) 571-7801</strong>
 
 <p>Email:
-<a href="mailto:Izzyscapelandscapingpros@gmail.com" style="color:#ffd600;">
+<a style="color:#ffd600" href="mailto:Izzyscapelandscapingpros@gmail.com">
 Izzyscapelandscapingpros@gmail.com
 </a>
 </p>
@@ -363,6 +359,82 @@ Izzyscapelandscapingpros@gmail.com
 
 </footer>
 
+<!-- SCRIPT -->
+
+<script>
+
+/* MENU */
+
+function toggleMenu(){
+let menu=document.getElementById("sideMenu");
+
+menu.style.right =
+menu.style.right=="0px" ? "-300px" : "0px";
+}
+
+/* PRICE */
+
+document.getElementById("price").onchange=function(){
+document.getElementById("total").innerText=this.value;
+}
+
+/* REVIEWS */
+
+function addReview(){
+
+let name=rName.value;
+let stars=rStars.value;
+let text=rText.value;
+
+if(!name||!text) return;
+
+let div=document.createElement("div");
+div.className="reviewBox";
+
+div.innerHTML="<b>"+name+"</b> "+stars+"<br>"+text;
+
+reviewList.prepend(div);
+
+rName.value="";
+rText.value="";
+
+}
+
+/* PAYPAL */
+
+</script>
+
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+
+<script>
+
+paypal.Buttons({
+
+createOrder:function(data,actions){
+
+let total=document.getElementById("total").innerText;
+
+return actions.order.create({
+
+purchase_units:[{amount:{value:total}}]
+
+});
+
+},
+
+onApprove:function(data,actions){
+
+return actions.order.capture().then(function(){
+
+alert("Payment Successful!");
+
+});
+
+}
+
+}).render("#paypal-button-container");
+
+</script>
 
 </body>
 </html>

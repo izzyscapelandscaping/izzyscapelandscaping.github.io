@@ -84,7 +84,10 @@ font-weight:bold;
 
 header{
 min-height:100vh;
-background:url("https://images.unsplash.com/photo-1568605114967-8130f3a36994") center/cover no-repeat;
+
+/* 🌿 MAIN LANDSCAPING HERO IMAGE */
+background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -92,8 +95,8 @@ text-align:center;
 }
 
 .heroBox{
-background:rgba(255,255,255,0.2);
-backdrop-filter:blur(8px);
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(10px);
 padding:40px;
 border-radius:12px;
 max-width:700px;
@@ -130,7 +133,7 @@ cursor:pointer;
 section{
 max-width:1100px;
 margin:auto;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 h2{
@@ -138,10 +141,10 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* SERVICES */
+/* SERVICES BOX */
 
 .service{
-background:#1f7a48;
+background:rgba(31,122,72,0.9);
 padding:18px;
 border-radius:8px;
 margin-bottom:12px;
@@ -150,14 +153,22 @@ justify-content:space-between;
 align-items:center;
 }
 
-/* BACKGROUND SECTIONS */
+/* 🌸 SERVICES BACKGROUND (FLOWERS) */
 
 .bgService{
-background:url("https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62") center/cover fixed;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e")
+center/cover fixed;
 }
 
+/* 🏡 PRESSURE WASH BACKGROUND (HOME) */
+
 .bgWash{
-background:url("https://images.unsplash.com/photo-1581579186989-1c81b92b7013") center/cover fixed;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
+center/cover fixed;
 }
 
 /* FORMS */
@@ -187,7 +198,7 @@ bottom:20px;
 right:20px;
 background:#ffd600;
 color:black;
-padding:15px;
+padding:15px 20px;
 border-radius:50px;
 font-weight:bold;
 z-index:5000;
@@ -247,7 +258,7 @@ padding:30px;
 
 </section>
 
-<!-- WASH -->
+<!-- PRESSURE WASH -->
 <section id="wash" class="bgWash">
 
 <h2>Pressure Washing</h2>
@@ -308,7 +319,9 @@ padding:30px;
 
 <h2>Serving All Bay Area</h2>
 
-<iframe width="100%" height="300" src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&t=&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
+<iframe width="100%" height="300"
+src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&t=&z=9&ie=UTF8&iwloc=&output=embed">
+</iframe>
 
 </section>
 

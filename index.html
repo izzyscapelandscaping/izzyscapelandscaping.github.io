@@ -26,9 +26,9 @@ overflow-x:hidden;
 
 #logo{
 position:fixed;
-top:10px;
+top:12px;
 left:20px;
-z-index:5000;
+z-index:6000;
 display:flex;
 flex-direction:column;
 }
@@ -45,39 +45,47 @@ font-size:15px;
 color:black;
 }
 
-/* MENU */
+/* MENU BUTTON */
 
 #menuBtn{
 position:fixed;
 top:15px;
-right:15px;
+right:20px;
 background:transparent;
 color:white;
 border:none;
-font-size:26px;
+font-size:28px;
 cursor:pointer;
-z-index:5000;
+z-index:6000;
 }
 
-#sideMenu{
+/* FULL OVERLAY MENU */
+
+#menuOverlay{
 position:fixed;
 top:0;
-right:-260px;
-width:260px;
+right:-100%;
+width:100%;
 height:100%;
-background:rgba(255,255,255,0.9);
-color:black;
-padding:30px;
+background:rgba(255,255,255,0.95);
+z-index:5500;
 transition:0.4s;
-z-index:4000;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-#sideMenu a{
+#menuContent{
+text-align:center;
+}
+
+#menuContent a{
 display:block;
-margin:20px 0;
+font-size:26px;
+margin:25px 0;
 text-decoration:none;
 color:black;
-font-weight:bold;
+font-weight:800;
 }
 
 /* HERO */
@@ -85,8 +93,9 @@ font-weight:bold;
 header{
 min-height:100vh;
 
-/* 🌿 MAIN LANDSCAPING HERO IMAGE */
-background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover no-repeat;
+/* 🌿 NEW CLEAN LANDSCAPING HERO IMAGE */
+background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80")
+center/cover no-repeat;
 
 display:flex;
 align-items:center;
@@ -141,7 +150,7 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* SERVICES BOX */
+/* SERVICES */
 
 .service{
 background:rgba(31,122,72,0.9);
@@ -153,7 +162,7 @@ justify-content:space-between;
 align-items:center;
 }
 
-/* 🌸 SERVICES BACKGROUND (FLOWERS) */
+/* BACKGROUND SECTIONS */
 
 .bgService{
 background:
@@ -161,8 +170,6 @@ linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url("https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e")
 center/cover fixed;
 }
-
-/* 🏡 PRESSURE WASH BACKGROUND (HOME) */
 
 .bgWash{
 background:
@@ -201,7 +208,7 @@ color:black;
 padding:15px 20px;
 border-radius:50px;
 font-weight:bold;
-z-index:5000;
+z-index:6000;
 text-decoration:none;
 }
 
@@ -224,15 +231,21 @@ padding:30px;
 <span class="logo-tag">Turning Yards Into Masterpieces</span>
 </div>
 
-<!-- MENU -->
+<!-- MENU BUTTON -->
 <button id="menuBtn">☰</button>
 
-<div id="sideMenu">
-<a href="#services">Services</a>
-<a href="#wash">Pressure Wash</a>
-<a href="#book">Book</a>
-<a href="#reviews">Reviews</a>
-<a href="#map">Service Area</a>
+<!-- FULL MENU OVERLAY -->
+<div id="menuOverlay" onclick="closeMenu()">
+
+<div id="menuContent" onclick="event.stopPropagation()">
+
+<a href="#services" onclick="closeMenu()">Services</a>
+<a href="#wash" onclick="closeMenu()">Pressure Wash</a>
+<a href="#book" onclick="closeMenu()">Book</a>
+<a href="#reviews" onclick="closeMenu()">Reviews</a>
+<a href="#map" onclick="closeMenu()">Service Area</a>
+
+</div>
 </div>
 
 <!-- HERO -->
@@ -258,7 +271,7 @@ padding:30px;
 
 </section>
 
-<!-- PRESSURE WASH -->
+<!-- WASH -->
 <section id="wash" class="bgWash">
 
 <h2>Pressure Washing</h2>
@@ -345,13 +358,17 @@ Izzyscapelandscapingpros@gmail.com
 
 <script>
 
-/* MENU */
+/* MENU OVERLAY */
 
 const btn=document.getElementById("menuBtn");
-const menu=document.getElementById("sideMenu");
+const menu=document.getElementById("menuOverlay");
 
 btn.onclick=()=>{
-menu.style.right=menu.style.right=="0px"?"-260px":"0px";
+menu.style.right="0";
+};
+
+function closeMenu(){
+menu.style.right="-100%";
 }
 
 /* TEXT FORMS */

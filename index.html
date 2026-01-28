@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>IzzyScape Professionals</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
+
+/* BODY */
 
 body{
 font-family:Montserrat,Arial,sans-serif;
@@ -22,44 +27,52 @@ color:white;
 overflow-x:hidden;
 }
 
+/* FADE ANIMATION */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
 /* LOGO */
 
 #logo{
 position:fixed;
-top:12px;
-left:20px;
-z-index:6000;
-display:flex;
-flex-direction:column;
+top:15px;
+left:25px;
+z-index:5000;
 }
 
 .logo-main{
 font-size:30px;
 font-weight:900;
-color:white;
 }
 
 .logo-tag{
 font-family:'Dancing Script',cursive;
-font-size:15px;
+font-size:14px;
 color:black;
 }
 
-/* MENU BUTTON */
+/* MENU */
 
 #menuBtn{
 position:fixed;
-top:15px;
-right:20px;
-background:transparent;
-color:white;
-border:none;
+top:18px;
+right:25px;
 font-size:28px;
+background:none;
+border:none;
+color:white;
 cursor:pointer;
-z-index:6000;
+z-index:5000;
 }
-
-/* FULL OVERLAY MENU */
 
 #menuOverlay{
 position:fixed;
@@ -68,7 +81,7 @@ right:-100%;
 width:100%;
 height:100%;
 background:rgba(255,255,255,0.95);
-z-index:5500;
+z-index:4000;
 transition:0.4s;
 display:flex;
 justify-content:center;
@@ -82,9 +95,9 @@ text-align:center;
 #menuContent a{
 display:block;
 font-size:26px;
-margin:25px 0;
-text-decoration:none;
+margin:20px 0;
 color:black;
+text-decoration:none;
 font-weight:800;
 }
 
@@ -92,11 +105,9 @@ font-weight:800;
 
 header{
 min-height:100vh;
-
-/* 🌿 NEW CLEAN LANDSCAPING HERO IMAGE */
-background:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80")
-center/cover no-repeat;
-
+background:
+url("https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1800&q=80")
+no-repeat center center / cover;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -105,9 +116,9 @@ text-align:center;
 
 .heroBox{
 background:rgba(255,255,255,0.25);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 padding:40px;
-border-radius:12px;
+border-radius:15px;
 max-width:700px;
 }
 
@@ -119,7 +130,7 @@ font-weight:900;
 
 .heroBox p{
 color:black;
-font-size:22px;
+font-size:20px;
 margin-top:10px;
 }
 
@@ -130,11 +141,11 @@ background:#2e7d32;
 color:white;
 padding:12px 25px;
 border-radius:6px;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
 border:none;
 cursor:pointer;
+text-decoration:none;
+display:inline-block;
+margin-top:15px;
 }
 
 /* SECTIONS */
@@ -142,7 +153,7 @@ cursor:pointer;
 section{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:70px 20px;
 }
 
 h2{
@@ -162,25 +173,25 @@ justify-content:space-between;
 align-items:center;
 }
 
-/* BACKGROUND SECTIONS */
+/* BACKGROUNDS */
 
 .bgService{
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url("https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e")
-center/cover fixed;
+url("https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=1800&q=80")
+no-repeat center center / cover fixed;
 }
 
 .bgWash{
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
-center/cover fixed;
+url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80")
+no-repeat center center / cover fixed;
 }
 
 /* FORMS */
 
-form input,form textarea,form select{
+form input,textarea,select{
 width:100%;
 padding:10px;
 margin:8px 0;
@@ -197,7 +208,7 @@ border-radius:8px;
 margin-bottom:15px;
 }
 
-/* CALL BUTTON */
+/* CALL */
 
 #callBtn{
 position:fixed;
@@ -208,8 +219,8 @@ color:black;
 padding:15px 20px;
 border-radius:50px;
 font-weight:bold;
-z-index:6000;
 text-decoration:none;
+z-index:5000;
 }
 
 /* FOOTER */
@@ -220,28 +231,47 @@ text-align:center;
 padding:30px;
 }
 
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+.heroBox h1{
+font-size:32px;
+}
+
+#logo{
+left:15px;
+}
+
+#menuBtn{
+right:15px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- LOGO -->
+
 <div id="logo">
-<span class="logo-main">🌿 IzzyScape Professionals</span>
-<span class="logo-tag">Turning Yards Into Masterpieces</span>
+<div class="logo-main">🌿 IzzyScape Professionals</div>
+<div class="logo-tag">Turning Yards Into Masterpieces</div>
 </div>
 
-<!-- MENU BUTTON -->
+<!-- MENU -->
+
 <button id="menuBtn">☰</button>
 
-<!-- FULL MENU OVERLAY -->
 <div id="menuOverlay" onclick="closeMenu()">
 
 <div id="menuContent" onclick="event.stopPropagation()">
 
 <a href="#services" onclick="closeMenu()">Services</a>
-<a href="#wash" onclick="closeMenu()">Pressure Wash</a>
-<a href="#book" onclick="closeMenu()">Book</a>
+<a href="#wash" onclick="closeMenu()">Pressure Washing</a>
+<a href="#book" onclick="closeMenu()">Booking</a>
 <a href="#reviews" onclick="closeMenu()">Reviews</a>
 <a href="#map" onclick="closeMenu()">Service Area</a>
 
@@ -249,16 +279,23 @@ padding:30px;
 </div>
 
 <!-- HERO -->
+
 <header>
-<div class="heroBox">
+
+<div class="heroBox fade">
+
 <h1>Bay Area Landscaping Experts</h1>
 <p>Professional • Affordable • Reliable</p>
+
 <a href="#book" class="btn">Get Free Estimate</a>
+
 </div>
+
 </header>
 
 <!-- SERVICES -->
-<section id="services" class="bgService">
+
+<section id="services" class="bgService fade">
 
 <h2>Our Services</h2>
 
@@ -272,7 +309,8 @@ padding:30px;
 </section>
 
 <!-- WASH -->
-<section id="wash" class="bgWash">
+
+<section id="wash" class="bgWash fade">
 
 <h2>Pressure Washing</h2>
 
@@ -284,7 +322,8 @@ padding:30px;
 </section>
 
 <!-- BOOK -->
-<section id="book">
+
+<section id="book" class="fade">
 
 <h2>Book Appointment</h2>
 
@@ -301,7 +340,8 @@ padding:30px;
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews">
+
+<section id="reviews" class="fade">
 
 <h2>Customer Reviews</h2>
 
@@ -328,7 +368,8 @@ padding:30px;
 </section>
 
 <!-- MAP -->
-<section id="map">
+
+<section id="map" class="fade">
 
 <h2>Serving All Bay Area</h2>
 
@@ -339,14 +380,17 @@ src="https://maps.google.com/maps?q=San%20Francisco%20Bay%20Area&t=&z=9&ie=UTF8&
 </section>
 
 <!-- CALL -->
+
 <a id="callBtn" href="tel:+15105717801">📞 Call Now</a>
 
 <!-- FOOTER -->
+
 <footer>
 
-<p>Call or Text: <strong>(510) 571-7801</strong></p>
+<p>Call/Text: <strong>(510) 571-7801</strong></p>
 
-<p>Email:
+<p>
+Email:
 <a href="mailto:Izzyscapelandscapingpros@gmail.com" style="color:#ffd600;">
 Izzyscapelandscapingpros@gmail.com
 </a>
@@ -358,7 +402,7 @@ Izzyscapelandscapingpros@gmail.com
 
 <script>
 
-/* MENU OVERLAY */
+/* MENU */
 
 const btn=document.getElementById("menuBtn");
 const menu=document.getElementById("menuOverlay");
@@ -371,66 +415,89 @@ function closeMenu(){
 menu.style.right="-100%";
 }
 
-/* TEXT FORMS */
+/* SMS BOOKING */
 
 const PHONE="15105717801";
 
 function sendText(e){
+
 e.preventDefault();
 
-let name=document.getElementById("name").value;
-let serv=document.getElementById("service").value;
-let det=document.getElementById("details").value;
-
-let msg=`Booking Request:
-Name: ${name}
-Service: ${serv}
-Details: ${det}`;
+let msg=
+`Booking Request:
+Name: ${name.value}
+Service: ${service.value}
+Details: ${details.value}`;
 
 window.location.href=`sms:${PHONE}?body=${encodeURIComponent(msg)}`;
+
 }
 
 /* REVIEWS */
 
 function addReview(e){
-e.preventDefault();
 
-let name=rname.value;
-let stars=document.getElementById("stars").value;
-let text=rtext.value;
+e.preventDefault();
 
 let data=JSON.parse(localStorage.getItem("reviews")||"[]");
 
-data.push({name,stars,text});
+data.push({
+name:rname.value,
+stars:stars.value,
+text:rtext.value
+});
 
 localStorage.setItem("reviews",JSON.stringify(data));
 
 showReviews();
 
 e.target.reset();
+
 }
 
 function showReviews(){
 
 let list=document.getElementById("reviewList");
+
 list.innerHTML="";
 
 let data=JSON.parse(localStorage.getItem("reviews")||"[]");
 
 data.forEach(r=>{
 
-let div=document.createElement("div");
-div.className="reviewBox";
+let d=document.createElement("div");
 
-div.innerHTML=`<strong>${r.name}</strong><br>${r.stars}<br>${r.text}`;
+d.className="reviewBox";
 
-list.appendChild(div);
+d.innerHTML=`<strong>${r.name}</strong><br>${r.stars}<br>${r.text}`;
+
+list.appendChild(d);
 
 });
 
 }
 
 showReviews();
+
+/* FADE ON SCROLL */
+
+const fades=document.querySelectorAll(".fade");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{threshold:0.2});
+
+fades.forEach(f=>observer.observe(f));
 
 </script>
 
